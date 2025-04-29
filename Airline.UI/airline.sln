@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.UI", "Airline.UI.csproj", "{BA5C0ECA-D457-435D-A2D8-F7FB472B0795}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.core", "..\Airline.core\Airline.core.csproj", "{386F7440-3088-4A37-8EE6-2D621C10C248}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA5C0ECA-D457-435D-A2D8-F7FB472B0795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA5C0ECA-D457-435D-A2D8-F7FB472B0795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA5C0ECA-D457-435D-A2D8-F7FB472B0795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA5C0ECA-D457-435D-A2D8-F7FB472B0795}.Release|Any CPU.Build.0 = Release|Any CPU
+		{386F7440-3088-4A37-8EE6-2D621C10C248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{386F7440-3088-4A37-8EE6-2D621C10C248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{386F7440-3088-4A37-8EE6-2D621C10C248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{386F7440-3088-4A37-8EE6-2D621C10C248}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8645C33-999E-42F7-8735-436E0537C7AD}
+	EndGlobalSection
+EndGlobal
