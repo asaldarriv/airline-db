@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace Airline.UI
 {
-    public partial class MenuPrincipal : Form
+    public partial class MainMenu : Form
     {
-        public MenuPrincipal()
+        public MainMenu()
         {
             InitializeComponent();
         }
@@ -20,6 +20,18 @@ namespace Airline.UI
         private void ButtonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ButtonDocumentTypes_Click(object sender, EventArgs e)
+        {
+            using var form = new DocumentTypesForm();
+            form.ShowDialog(this);
+        }
+
+        private void ButtonCountries_Click(object sender, EventArgs e)
+        {
+            using var form = new CountryForm();
+            form.ShowDialog(this);
         }
     }
 }

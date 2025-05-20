@@ -1,6 +1,6 @@
 ﻿namespace Airline.UI
 {
-    partial class MenuPrincipal
+    partial class MainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             pictureBoxLogo = new PictureBox();
             labelTitle = new Label();
             buttonLogout = new Button();
             buttonExit = new Button();
+            buttonDocumentTypes = new Button();
+            buttonCountries = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
             SuspendLayout();
             // 
             // pictureBoxLogo
             // 
-            pictureBoxLogo.ImageLocation = "logoEafit.ico"; // Use relative path or set as resource
+            pictureBoxLogo.ImageLocation = ""; // Use relative path or set as resource
             pictureBoxLogo.Location = new Point(1, 1);
             pictureBoxLogo.Name = "pictureBoxLogo";
             pictureBoxLogo.Size = new Size(261, 124);
             pictureBoxLogo.TabIndex = 1;
             pictureBoxLogo.TabStop = false;
+            pictureBoxLogo.Image = Properties.Resources.logoEafit;
             // 
             // labelTitle
             // 
@@ -82,6 +85,32 @@
             buttonExit.UseVisualStyleBackColor = false;
             buttonExit.Click += ButtonExit_Click;
             // 
+            // buttonDocumentTypes
+            // 
+            buttonDocumentTypes.BackColor = Color.Navy;
+            buttonDocumentTypes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonDocumentTypes.ForeColor = Color.White;
+            buttonDocumentTypes.Location = new Point(320, 200); // Ajusta la posición según tu layout
+            buttonDocumentTypes.Name = "buttonDocumentTypes";
+            buttonDocumentTypes.Size = new Size(160, 40);
+            buttonDocumentTypes.TabIndex = 10;
+            buttonDocumentTypes.Text = "Document Types";
+            buttonDocumentTypes.UseVisualStyleBackColor = false;
+            buttonDocumentTypes.Click += ButtonDocumentTypes_Click;
+            // 
+            // buttonCountries
+            // 
+            buttonCountries.BackColor = Color.Navy;
+            buttonCountries.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonCountries.ForeColor = Color.White;
+            buttonCountries.Location = new Point(320, 260); // Ajusta la posición según tu layout
+            buttonCountries.Name = "buttonCountries";
+            buttonCountries.Size = new Size(160, 40);
+            buttonCountries.TabIndex = 11;
+            buttonCountries.Text = "Countries";
+            buttonCountries.UseVisualStyleBackColor = false;
+            buttonCountries.Click += ButtonCountries_Click;
+            // 
             // MenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -89,6 +118,8 @@
             ClientSize = new Size(800, 450);
             Controls.Add(buttonExit);
             Controls.Add(buttonLogout);
+            Controls.Add(buttonDocumentTypes);
+            Controls.Add(buttonCountries);
             Controls.Add(labelTitle);
             Controls.Add(pictureBoxLogo);
             Name = "MenuPrincipal";
@@ -105,5 +136,7 @@
         private Label labelTitle;
         private Button buttonLogout;
         private Button buttonExit;
+        private Button buttonDocumentTypes;
+        private Button buttonCountries;
     }
 }

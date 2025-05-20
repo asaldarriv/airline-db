@@ -19,7 +19,7 @@ namespace airline
                     // Show login as modal dialog
                     if (loginForm.ShowDialog() == DialogResult.OK)
                     {
-                        using (var mainMenu = new MenuPrincipal())
+                        using (var mainMenu = new MainMenu())
                         {
                             // Show main menu as modal dialog
                             if (mainMenu.ShowDialog() != DialogResult.Retry)
