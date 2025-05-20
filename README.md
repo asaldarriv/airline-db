@@ -18,4 +18,13 @@
      ```
    - Esto instalará todas las dependencias necesarias, incluyendo el conector de MySQL para .NET.
 
+5. **Establecer la variable de entorno de conexión**
+   - Debe estar configurada la variable de entorno en tu sistema para la conexión a la base de datos. Por ejemplo:
+     ```
+     EAFIT_DB_CONNECTION=server=127.0.0.1;uid=root;pwd=toor;database=airline_db
+     ```
+   - Ajusta los valores según tu configuración local de MySQL (usuario, contraseña, nombre de la base de datos, etc.).
+
 ---
+
+Si tienes dudas o problemas para levantar el proyecto, por favor revisa la documentación o abre un issue en este repositorio.
