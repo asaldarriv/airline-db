@@ -23,12 +23,12 @@ namespace Airline.UI
             {
                 Hide();
 
-                // El ID de CUSTOMER según tu base de datos es 6
+                // CUSTOMER role ID is 6
                 if (form.AuthenticatedUser.RoleId == 6)
                 {
-                    using (var ticketPurchaseForm = new TicketPurchaseForm(form.AuthenticatedUser))
+                    using (var customerMenu = new CustomerMenuForm(form.AuthenticatedUser))
                     {
-                        ticketPurchaseForm.ShowDialog();
+                        customerMenu.ShowDialog();
                     }
                 }
                 else

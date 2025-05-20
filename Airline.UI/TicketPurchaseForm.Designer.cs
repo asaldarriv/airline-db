@@ -13,6 +13,7 @@ namespace Airline.UI
         private System.Windows.Forms.DateTimePicker dateTimePickerDate;
         private System.Windows.Forms.Button buttonSearchFlights;
         private System.Windows.Forms.DataGridView dataGridViewFlights;
+        private System.Windows.Forms.Button buttonSelectFlight;
 
         protected override void Dispose(bool disposing)
         {
@@ -33,6 +34,7 @@ namespace Airline.UI
             this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
             this.buttonSearchFlights = new System.Windows.Forms.Button();
             this.dataGridViewFlights = new System.Windows.Forms.DataGridView();
+            this.buttonSelectFlight = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFlights)).BeginInit();
             this.tableLayoutPanelMain.SuspendLayout();
             this.SuspendLayout();
@@ -62,11 +64,16 @@ namespace Airline.UI
             this.tableLayoutPanelMain.Controls.Add(this.buttonSearchFlights, 3, 2);
             this.tableLayoutPanelMain.Controls.Add(this.dataGridViewFlights, 0, 4);
             this.tableLayoutPanelMain.SetColumnSpan(this.dataGridViewFlights, 4);
+            this.tableLayoutPanelMain.Controls.Add(this.buttonSelectFlight, 3, 3);
+            this.tableLayoutPanelMain.BackColor = System.Drawing.Color.White;
             // 
             // labelWelcome
             // 
             this.labelWelcome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelWelcome.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWelcome.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            this.labelWelcome.ForeColor = System.Drawing.Color.Navy;
+            this.labelWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelWelcome.AutoSize = true;
             this.labelWelcome.Location = new System.Drawing.Point(0, 0);
             this.labelWelcome.Name = "labelWelcome";
             this.labelWelcome.Size = new System.Drawing.Size(800, 60);
@@ -149,6 +156,14 @@ namespace Airline.UI
             this.dataGridViewFlights.ReadOnly = true;
             this.dataGridViewFlights.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewFlights.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewFlights.BackgroundColor = System.Drawing.Color.Gainsboro;
+            // 
+            // buttonSelectFlight
+            // 
+            this.buttonSelectFlight.Text = "Select Flight";
+            this.buttonSelectFlight.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSelectFlight.Size = new System.Drawing.Size(200, 30);
+            this.buttonSelectFlight.Click += new System.EventHandler(this.buttonSelectFlight_Click);
             // 
             // TicketPurchaseForm
             // 
