@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Airline.UI
@@ -17,14 +10,14 @@ namespace Airline.UI
             InitializeComponent();
         }
 
-        private void BtnSalir_Click(object sender, EventArgs e)
+        private void ButtonLogout_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
+            // This will signal Program.cs to show the login form again
+            this.DialogResult = DialogResult.Retry;
             this.Close();
         }
 
-        private void BtnSalir_Click_1(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

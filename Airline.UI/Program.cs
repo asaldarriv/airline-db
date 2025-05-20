@@ -5,15 +5,33 @@ namespace airline
     internal static class Program
     {
         /// <summary>
-        ///  The main entry point for the application.
+        /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+
+            while (true)
+            {
+                using (var loginForm = new Login())
+                {
+                    // Show login as modal dialog
+                    if (loginForm.ShowDialog() == DialogResult.OK)
+                    {
+                        using (var mainMenu = new MenuPrincipal())
+                        {
+                            // Show main menu as modal dialog
+                            if (mainMenu.ShowDialog() != DialogResult.Retry)
+                                break; // Exit app if not logging out
+                        }
+                    }
+                    else
+                    {
+                        break; // Exit app if login cancelled/closed
+                    }
+                }
+            }
         }
     }
 }

@@ -28,81 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            EafitLogo = new PictureBox();
-            LblTitulo = new Label();
-            BtnCerrarSesion = new Button();
-            BtnSalir = new Button();
-            ((System.ComponentModel.ISupportInitialize)EafitLogo).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
+            pictureBoxLogo = new PictureBox();
+            labelTitle = new Label();
+            buttonLogout = new Button();
+            buttonExit = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
             SuspendLayout();
             // 
-            // EafitLogo
+            // pictureBoxLogo
             // 
-            EafitLogo.ImageLocation = "C:\\Users\\AlexEcoregistry\\Documents\\Dev\\gestion-de-datos\\Airline.UI\\logoEafit.ico";
-            EafitLogo.Location = new Point(1, 1);
-            EafitLogo.Name = "EafitLogo";
-            EafitLogo.Size = new Size(261, 124);
-            EafitLogo.TabIndex = 1;
-            EafitLogo.TabStop = false;
+            pictureBoxLogo.ImageLocation = "logoEafit.ico"; // Use relative path or set as resource
+            pictureBoxLogo.Location = new Point(1, 1);
+            pictureBoxLogo.Name = "pictureBoxLogo";
+            pictureBoxLogo.Size = new Size(261, 124);
+            pictureBoxLogo.TabIndex = 1;
+            pictureBoxLogo.TabStop = false;
             // 
-            // LblTitulo
+            // labelTitle
             // 
-            LblTitulo.AutoSize = true;
-            LblTitulo.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LblTitulo.ForeColor = Color.Navy;
-            LblTitulo.Location = new Point(403, 51);
-            LblTitulo.Name = "LblTitulo";
-            LblTitulo.Size = new Size(210, 37);
-            LblTitulo.TabIndex = 2;
-            LblTitulo.Text = "Menú principal";
+            labelTitle.AutoSize = true;
+            labelTitle.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelTitle.ForeColor = Color.Navy;
+            labelTitle.Location = new Point(403, 51);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(220, 37);
+            labelTitle.TabIndex = 2;
+            labelTitle.Text = "Main Menu";
             // 
-            // BtnCerrarSesion
+            // buttonLogout
             // 
-            BtnCerrarSesion.BackColor = Color.Navy;
-            BtnCerrarSesion.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BtnCerrarSesion.ForeColor = Color.White;
-            BtnCerrarSesion.Location = new Point(117, 324);
-            BtnCerrarSesion.Name = "BtnCerrarSesion";
-            BtnCerrarSesion.Size = new Size(226, 55);
-            BtnCerrarSesion.TabIndex = 8;
-            BtnCerrarSesion.Text = "Cerrar sesión";
-            BtnCerrarSesion.UseVisualStyleBackColor = false;
-            BtnCerrarSesion.Click += BtnSalir_Click;
+            buttonLogout.BackColor = Color.Navy;
+            buttonLogout.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonLogout.ForeColor = Color.White;
+            buttonLogout.Location = new Point(117, 324);
+            buttonLogout.Name = "buttonLogout";
+            buttonLogout.Size = new Size(226, 55);
+            buttonLogout.TabIndex = 8;
+            buttonLogout.Text = "Log Out";
+            buttonLogout.UseVisualStyleBackColor = false;
+            buttonLogout.Click += ButtonLogout_Click;
             // 
-            // BtnSalir
+            // buttonExit
             // 
-            BtnSalir.BackColor = Color.Navy;
-            BtnSalir.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BtnSalir.ForeColor = Color.White;
-            BtnSalir.Location = new Point(450, 324);
-            BtnSalir.Name = "BtnSalir";
-            BtnSalir.Size = new Size(226, 55);
-            BtnSalir.TabIndex = 9;
-            BtnSalir.Text = "Salir";
-            BtnSalir.UseVisualStyleBackColor = false;
-            BtnSalir.Click += BtnSalir_Click_1;
+            buttonExit.BackColor = Color.Navy;
+            buttonExit.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonExit.ForeColor = Color.White;
+            buttonExit.Location = new Point(450, 324);
+            buttonExit.Name = "buttonExit";
+            buttonExit.Size = new Size(226, 55);
+            buttonExit.TabIndex = 9;
+            buttonExit.Text = "Exit";
+            buttonExit.UseVisualStyleBackColor = false;
+            buttonExit.Click += ButtonExit_Click;
             // 
             // MenuPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(BtnSalir);
-            Controls.Add(BtnCerrarSesion);
-            Controls.Add(LblTitulo);
-            Controls.Add(EafitLogo);
+            Controls.Add(buttonExit);
+            Controls.Add(buttonLogout);
+            Controls.Add(labelTitle);
+            Controls.Add(pictureBoxLogo);
             Name = "MenuPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Menú principal";
-            ((System.ComponentModel.ISupportInitialize)EafitLogo).EndInit();
+            Text = "Main Menu";
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox EafitLogo;
-        private Label LblTitulo;
-        private Button BtnCerrarSesion;
-        private Button BtnSalir;
+        private PictureBox pictureBoxLogo;
+        private Label labelTitle;
+        private Button buttonLogout;
+        private Button buttonExit;
     }
 }

@@ -29,136 +29,142 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            EafitLogo = new PictureBox();
-            Titulo = new Label();
-            LbUsuario = new Label();
-            LbContrasena = new Label();
-            TxUsuario = new TextBox();
-            TxContrasena = new TextBox();
-            BtnIngresar = new Button();
-            BtnSalir = new Button();
-            ((System.ComponentModel.ISupportInitialize)EafitLogo).BeginInit();
+            pictureBoxLogo = new PictureBox();
+            labelTitle = new Label();
+            labelUsername = new Label();
+            labelPassword = new Label();
+            textBoxUsername = new TextBox();
+            textBoxPassword = new TextBox();
+            buttonLogin = new Button();
+            buttonExit = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
             SuspendLayout();
             // 
-            // EafitLogo
+            // pictureBoxLogo
             // 
-            EafitLogo.ImageLocation = "C:\\Users\\AlexEcoregistry\\Documents\\Dev\\gestion-de-datos\\Airline.UI\\logoEafit.ico";
-            EafitLogo.Location = new Point(0, 3);
-            EafitLogo.Name = "EafitLogo";
-            EafitLogo.Size = new Size(261, 124);
-            EafitLogo.TabIndex = 0;
-            EafitLogo.TabStop = false;
+            pictureBoxLogo.ImageLocation = "";
+            pictureBoxLogo.Location = new Point(0, 4);
+            pictureBoxLogo.Margin = new Padding(3, 4, 3, 4);
+            pictureBoxLogo.Name = "pictureBoxLogo";
+            pictureBoxLogo.Size = new Size(298, 165);
+            pictureBoxLogo.TabIndex = 0;
+            pictureBoxLogo.TabStop = false;
+            pictureBoxLogo.Image = Properties.Resources.logoEafit;
             // 
-            // Titulo
+            // labelTitle
             // 
-            Titulo.AutoSize = true;
-            Titulo.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Titulo.ForeColor = Color.Navy;
-            Titulo.Location = new Point(358, 45);
-            Titulo.Name = "Titulo";
-            Titulo.Size = new Size(282, 37);
-            Titulo.TabIndex = 1;
-            Titulo.Text = "Aplicación Aerolínea";
+            labelTitle.AutoSize = true;
+            labelTitle.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelTitle.ForeColor = Color.Navy;
+            labelTitle.Location = new Point(409, 60);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(321, 46);
+            labelTitle.TabIndex = 1;
+            labelTitle.Text = "Airline Application";
             // 
-            // LbUsuario
+            // labelUsername
             // 
-            LbUsuario.AutoSize = true;
-            LbUsuario.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LbUsuario.ForeColor = Color.Navy;
-            LbUsuario.Location = new Point(165, 190);
-            LbUsuario.Name = "LbUsuario";
-            LbUsuario.Size = new Size(123, 37);
-            LbUsuario.TabIndex = 2;
-            LbUsuario.Text = "Usuario:";
+            labelUsername.AutoSize = true;
+            labelUsername.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelUsername.ForeColor = Color.Navy;
+            labelUsername.Location = new Point(189, 253);
+            labelUsername.Name = "labelUsername";
+            labelUsername.Size = new Size(189, 46);
+            labelUsername.TabIndex = 2;
+            labelUsername.Text = "Username:";
             // 
-            // LbContrasena
+            // labelPassword
             // 
-            LbContrasena.AutoSize = true;
-            LbContrasena.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LbContrasena.ForeColor = Color.Navy;
-            LbContrasena.Location = new Point(119, 263);
-            LbContrasena.Name = "LbContrasena";
-            LbContrasena.Size = new Size(169, 37);
-            LbContrasena.TabIndex = 3;
-            LbContrasena.Text = "Contraseña:";
-            LbContrasena.Click += label1_Click;
+            labelPassword.AutoSize = true;
+            labelPassword.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelPassword.ForeColor = Color.Navy;
+            labelPassword.Location = new Point(136, 351);
+            labelPassword.Name = "labelPassword";
+            labelPassword.Size = new Size(180, 46);
+            labelPassword.TabIndex = 3;
+            labelPassword.Text = "Password:";
             // 
-            // TxUsuario
+            // textBoxUsername
             // 
-            TxUsuario.BorderStyle = BorderStyle.FixedSingle;
-            TxUsuario.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TxUsuario.Location = new Point(332, 190);
-            TxUsuario.Name = "TxUsuario";
-            TxUsuario.Size = new Size(200, 35);
-            TxUsuario.TabIndex = 4;
+            textBoxUsername.BorderStyle = BorderStyle.FixedSingle;
+            textBoxUsername.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxUsername.Location = new Point(379, 253);
+            textBoxUsername.Margin = new Padding(3, 4, 3, 4);
+            textBoxUsername.Name = "textBoxUsername";
+            textBoxUsername.Size = new Size(228, 42);
+            textBoxUsername.TabIndex = 4;
             // 
-            // TxContrasena
+            // textBoxPassword
             // 
-            TxContrasena.BorderStyle = BorderStyle.FixedSingle;
-            TxContrasena.Font = new Font("Segoe UI", 15.75F);
-            TxContrasena.Location = new Point(332, 263);
-            TxContrasena.Name = "TxContrasena";
-            TxContrasena.Size = new Size(200, 35);
-            TxContrasena.TabIndex = 5;
-            TxContrasena.UseSystemPasswordChar = true;
+            textBoxPassword.BorderStyle = BorderStyle.FixedSingle;
+            textBoxPassword.Font = new Font("Segoe UI", 15.75F);
+            textBoxPassword.Location = new Point(379, 351);
+            textBoxPassword.Margin = new Padding(3, 4, 3, 4);
+            textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.Size = new Size(228, 42);
+            textBoxPassword.TabIndex = 5;
+            textBoxPassword.UseSystemPasswordChar = true;
             // 
-            // BtnIngresar
+            // buttonLogin
             // 
-            BtnIngresar.BackColor = Color.Navy;
-            BtnIngresar.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BtnIngresar.ForeColor = Color.White;
-            BtnIngresar.Location = new Point(210, 352);
-            BtnIngresar.Name = "BtnIngresar";
-            BtnIngresar.Size = new Size(140, 55);
-            BtnIngresar.TabIndex = 6;
-            BtnIngresar.Text = "Ingresar";
-            BtnIngresar.UseVisualStyleBackColor = false;
-            BtnIngresar.Click += BtnIngresar_Click;
+            buttonLogin.BackColor = Color.Navy;
+            buttonLogin.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonLogin.ForeColor = Color.White;
+            buttonLogin.Location = new Point(240, 469);
+            buttonLogin.Margin = new Padding(3, 4, 3, 4);
+            buttonLogin.Name = "buttonLogin";
+            buttonLogin.Size = new Size(160, 73);
+            buttonLogin.TabIndex = 6;
+            buttonLogin.Text = "Login";
+            buttonLogin.UseVisualStyleBackColor = false;
+            buttonLogin.Click += ButtonLogin_Click;
             // 
-            // BtnSalir
+            // buttonExit
             // 
-            BtnSalir.BackColor = Color.Navy;
-            BtnSalir.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BtnSalir.ForeColor = Color.White;
-            BtnSalir.Location = new Point(423, 352);
-            BtnSalir.Name = "BtnSalir";
-            BtnSalir.Size = new Size(140, 55);
-            BtnSalir.TabIndex = 7;
-            BtnSalir.Text = "Salir";
-            BtnSalir.UseVisualStyleBackColor = false;
-            BtnSalir.Click += BtnSalir_Click;
+            buttonExit.BackColor = Color.Navy;
+            buttonExit.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonExit.ForeColor = Color.White;
+            buttonExit.Location = new Point(483, 469);
+            buttonExit.Margin = new Padding(3, 4, 3, 4);
+            buttonExit.Name = "buttonExit";
+            buttonExit.Size = new Size(160, 73);
+            buttonExit.TabIndex = 7;
+            buttonExit.Text = "Exit";
+            buttonExit.UseVisualStyleBackColor = false;
+            buttonExit.Click += ButtonExit_Click;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(BtnSalir);
-            Controls.Add(BtnIngresar);
-            Controls.Add(TxContrasena);
-            Controls.Add(TxUsuario);
-            Controls.Add(LbContrasena);
-            Controls.Add(LbUsuario);
-            Controls.Add(Titulo);
-            Controls.Add(EafitLogo);
+            ClientSize = new Size(914, 600);
+            Controls.Add(buttonExit);
+            Controls.Add(buttonLogin);
+            Controls.Add(textBoxPassword);
+            Controls.Add(textBoxUsername);
+            Controls.Add(labelPassword);
+            Controls.Add(labelUsername);
+            Controls.Add(labelTitle);
+            Controls.Add(pictureBoxLogo);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Universidad EAFIT - Aerolínea - Login";
-            ((System.ComponentModel.ISupportInitialize)EafitLogo).EndInit();
+            Text = "EAFIT University - Airline - Login";
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox EafitLogo;
-        private Label Titulo;
-        private Label LbUsuario;
-        private Label LbContrasena;
-        private TextBox TxUsuario;
-        private TextBox TxContrasena;
-        private Button BtnIngresar;
-        private Button BtnSalir;
+        private PictureBox pictureBoxLogo;
+        private Label labelTitle;
+        private Label labelUsername;
+        private Label labelPassword;
+        private TextBox textBoxUsername;
+        private TextBox textBoxPassword;
+        private Button buttonLogin;
+        private Button buttonExit;
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Airline.core.AirlineFacade;
 
@@ -18,57 +11,46 @@ namespace Airline.UI
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnSalir_Click(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void BtnIngresar_Click(object sender, EventArgs e)
+        private void ButtonLogin_Click(object sender, EventArgs e)
         {
             try
             {
-                string usuario = TxUsuario.Text;
-                string contrasena = TxContrasena.Text;
-                bool EsCorrecto;
-                EsCorrecto = false;
+                string username = textBoxUsername.Text.Trim();
+                string password = textBoxPassword.Text;
 
-                FacadeLogin facadeLogin = new FacadeLogin();
-
-                if (string.IsNullOrEmpty(usuario))
+                if (string.IsNullOrWhiteSpace(username))
                 {
-                    MessageBox.Show("El campo usuario no puede estar vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Username field cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                if (string.IsNullOrEmpty(contrasena))
+                if (string.IsNullOrWhiteSpace(password))
                 {
-                    MessageBox.Show("El campo contraseña no puede estar vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Password field cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                EsCorrecto = facadeLogin.ValidarLogin(usuario, contrasena);
+                var loginFacade = new LoginFacade();
+                bool isValid = loginFacade.ValidateLogin(username, password);
 
-                if (EsCorrecto)
+                if (isValid)
                 {
-                    MenuPrincipal menuPrincipal = new MenuPrincipal();
-                    menuPrincipal.Show();
-                    this.Hide();
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
-            catch (Exception error)
+            catch (Exception ex)
             {
-                MessageBox.Show(error.Message + Environment.NewLine + error.StackTrace, "Error controlado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{ex.Message}{Environment.NewLine}{ex.StackTrace}", "Controlled error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
