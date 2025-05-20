@@ -39,5 +39,11 @@ namespace Airline.UI
             using var form = new CityForm();
             form.ShowDialog(this);
         }
+
+        private void ButtonLuggageTypes_Click(object sender, EventArgs e)
+        {
+            using var form = new LuggageTypeForm();
+            form.ShowDialog(this);
+        }
     }
 }

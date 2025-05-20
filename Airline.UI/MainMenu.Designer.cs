@@ -10,6 +10,7 @@
         private System.Windows.Forms.Button buttonDocumentTypes;
         private System.Windows.Forms.Button buttonCountries;
         private System.Windows.Forms.Button buttonCities;
+        private System.Windows.Forms.Button buttonLuggageTypes;
         // Agrega aquí más botones según tus entidades...
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMenu;
 
@@ -34,6 +35,7 @@
             buttonDocumentTypes = new System.Windows.Forms.Button();
             buttonCountries = new System.Windows.Forms.Button();
             buttonCities = new System.Windows.Forms.Button();
+            buttonLuggageTypes = new System.Windows.Forms.Button();
             // Instancia aquí más botones si los tienes...
             tableLayoutPanelMenu = new System.Windows.Forms.TableLayoutPanel();
 
@@ -101,6 +103,16 @@
             buttonCities.Margin = new System.Windows.Forms.Padding(10);
             buttonCities.Click += ButtonCities_Click;
 
+            // buttonLuggageTypes
+            buttonLuggageTypes.BackColor = System.Drawing.Color.Navy;
+            buttonLuggageTypes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonLuggageTypes.ForeColor = System.Drawing.Color.White;
+            buttonLuggageTypes.Name = "buttonLuggageTypes";
+            buttonLuggageTypes.Text = "Luggage Types";
+            buttonLuggageTypes.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonLuggageTypes.Margin = new System.Windows.Forms.Padding(10);
+            buttonLuggageTypes.Click += ButtonLuggageTypes_Click;
+
             // buttonLogout
             buttonLogout.BackColor = System.Drawing.Color.Navy;
             buttonLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
@@ -125,8 +137,9 @@
             tableLayoutPanelMenu.Controls.Add(buttonDocumentTypes, 0, 0);
             tableLayoutPanelMenu.Controls.Add(buttonCountries, 1, 0);
             tableLayoutPanelMenu.Controls.Add(buttonCities, 0, 1);
-            tableLayoutPanelMenu.Controls.Add(buttonLogout, 1, 1);
-            tableLayoutPanelMenu.Controls.Add(buttonExit, 0, 2);
+            tableLayoutPanelMenu.Controls.Add(buttonLuggageTypes, 1, 1);
+            tableLayoutPanelMenu.Controls.Add(buttonLogout, 0, 2);
+            tableLayoutPanelMenu.Controls.Add(buttonExit, 1, 2);
 
             // MainMenu
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
