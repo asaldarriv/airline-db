@@ -1,13 +1,11 @@
 namespace Airline.UI
 {
-    partial class CountryForm
+    partial class CityForm
     {
         private System.ComponentModel.IContainer components = null;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMain;
-        private System.Windows.Forms.DataGridView dataGridViewCountries;
+        private System.Windows.Forms.DataGridView dataGridViewCities;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelInputs;
-        private System.Windows.Forms.Label labelIsoCode;
-        private System.Windows.Forms.TextBox textBoxIsoCode;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelActive;
@@ -29,10 +27,8 @@ namespace Airline.UI
         {
             components = new System.ComponentModel.Container();
             tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
-            dataGridViewCountries = new System.Windows.Forms.DataGridView();
+            dataGridViewCities = new System.Windows.Forms.DataGridView();
             tableLayoutPanelInputs = new System.Windows.Forms.TableLayoutPanel();
-            labelIsoCode = new System.Windows.Forms.Label();
-            textBoxIsoCode = new System.Windows.Forms.TextBox();
             labelName = new System.Windows.Forms.Label();
             textBoxName = new System.Windows.Forms.TextBox();
             labelActive = new System.Windows.Forms.Label();
@@ -43,7 +39,7 @@ namespace Airline.UI
             buttonDelete = new System.Windows.Forms.Button();
             buttonCancel = new System.Windows.Forms.Button();
 
-            ((System.ComponentModel.ISupportInitialize)(dataGridViewCountries)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(dataGridViewCities)).BeginInit();
             tableLayoutPanelMain.SuspendLayout();
             tableLayoutPanelInputs.SuspendLayout();
             flowLayoutPanelButtons.SuspendLayout();
@@ -53,71 +49,59 @@ namespace Airline.UI
             tableLayoutPanelMain.ColumnCount = 1;
             tableLayoutPanelMain.RowCount = 3;
             tableLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F)); // DataGridView
-            tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 110F)); // Inputs
-            tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F)); // Botones
+            tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             tableLayoutPanelMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanelMain.Controls.Add(dataGridViewCountries, 0, 0);
+            tableLayoutPanelMain.Controls.Add(dataGridViewCities, 0, 0);
             tableLayoutPanelMain.Controls.Add(tableLayoutPanelInputs, 0, 1);
             tableLayoutPanelMain.Controls.Add(flowLayoutPanelButtons, 0, 2);
 
-            // dataGridViewCountries
-            dataGridViewCountries.Dock = System.Windows.Forms.DockStyle.Fill;
-            dataGridViewCountries.AllowUserToAddRows = false;
-            dataGridViewCountries.AllowUserToDeleteRows = false;
-            dataGridViewCountries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCountries.MultiSelect = false;
-            dataGridViewCountries.Name = "dataGridViewCountries";
-            dataGridViewCountries.ReadOnly = true;
-            dataGridViewCountries.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewCountries.TabIndex = 0;
-            dataGridViewCountries.SelectionChanged += new System.EventHandler(this.dataGridViewCountries_SelectionChanged);
+            // dataGridViewCities
+            dataGridViewCities.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridViewCities.AllowUserToAddRows = false;
+            dataGridViewCities.AllowUserToDeleteRows = false;
+            dataGridViewCities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCities.MultiSelect = false;
+            dataGridViewCities.Name = "dataGridViewCities";
+            dataGridViewCities.ReadOnly = true;
+            dataGridViewCities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewCities.TabIndex = 0;
+            dataGridViewCities.SelectionChanged += new System.EventHandler(this.dataGridViewCities_SelectionChanged);
 
             // tableLayoutPanelInputs
             tableLayoutPanelInputs.Anchor = System.Windows.Forms.AnchorStyles.None;
             tableLayoutPanelInputs.ColumnCount = 2;
-            tableLayoutPanelInputs.RowCount = 3;
+            tableLayoutPanelInputs.RowCount = 2;
             tableLayoutPanelInputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             tableLayoutPanelInputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             tableLayoutPanelInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             tableLayoutPanelInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            tableLayoutPanelInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            tableLayoutPanelInputs.Size = new System.Drawing.Size(400, 105);
+            tableLayoutPanelInputs.Size = new System.Drawing.Size(400, 70);
             tableLayoutPanelInputs.Name = "tableLayoutPanelInputs";
             tableLayoutPanelInputs.TabIndex = 1;
-
-            // labelIsoCode
-            labelIsoCode.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            labelIsoCode.AutoSize = true;
-            labelIsoCode.Text = "ISO Code:";
-            tableLayoutPanelInputs.Controls.Add(labelIsoCode, 0, 0);
-
-            // textBoxIsoCode
-            textBoxIsoCode.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            textBoxIsoCode.Size = new System.Drawing.Size(200, 27);
-            tableLayoutPanelInputs.Controls.Add(textBoxIsoCode, 1, 0);
 
             // labelName
             labelName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             labelName.AutoSize = true;
             labelName.Text = "Name:";
-            tableLayoutPanelInputs.Controls.Add(labelName, 0, 1);
+            tableLayoutPanelInputs.Controls.Add(labelName, 0, 0);
 
             // textBoxName
             textBoxName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            textBoxName.Size = new System.Drawing.Size(200, 27);
-            tableLayoutPanelInputs.Controls.Add(textBoxName, 1, 1);
+            textBoxName.Size = new System.Drawing.Size(250, 27);
+            tableLayoutPanelInputs.Controls.Add(textBoxName, 1, 0);
 
             // labelActive
             labelActive.Anchor = System.Windows.Forms.AnchorStyles.Right;
             labelActive.AutoSize = true;
             labelActive.Text = "Active:";
-            tableLayoutPanelInputs.Controls.Add(labelActive, 0, 2);
+            tableLayoutPanelInputs.Controls.Add(labelActive, 0, 1);
 
             // checkBoxActive
             checkBoxActive.Anchor = System.Windows.Forms.AnchorStyles.Left;
             checkBoxActive.Size = new System.Drawing.Size(20, 27);
-            tableLayoutPanelInputs.Controls.Add(checkBoxActive, 1, 2);
+            tableLayoutPanelInputs.Controls.Add(checkBoxActive, 1, 1);
 
             // flowLayoutPanelButtons
             flowLayoutPanelButtons.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -127,7 +111,7 @@ namespace Airline.UI
             flowLayoutPanelButtons.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 
             // buttonAddNew
-            buttonAddNew.Text = "Add new country";
+            buttonAddNew.Text = "Add new city";
             buttonAddNew.Size = new System.Drawing.Size(120, 35);
             buttonAddNew.UseVisualStyleBackColor = true;
             buttonAddNew.Click += new System.EventHandler(this.buttonAddNew_Click);
@@ -157,15 +141,15 @@ namespace Airline.UI
             flowLayoutPanelButtons.Controls.Add(buttonDelete);
             flowLayoutPanelButtons.Controls.Add(buttonCancel);
 
-            // CountryForm
+            // CityForm
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(830, 480);
             Controls.Add(tableLayoutPanelMain);
-            Name = "CountryForm";
+            Name = "CityForm";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            Text = "Countries";
-            ((System.ComponentModel.ISupportInitialize)(dataGridViewCountries)).EndInit();
+            Text = "Cities";
+            ((System.ComponentModel.ISupportInitialize)(dataGridViewCities)).EndInit();
             tableLayoutPanelMain.ResumeLayout(false);
             tableLayoutPanelInputs.ResumeLayout(false);
             tableLayoutPanelInputs.PerformLayout();

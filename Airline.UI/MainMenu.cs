@@ -33,5 +33,11 @@ namespace Airline.UI
             using var form = new CountryForm();
             form.ShowDialog(this);
         }
+
+        private void ButtonCities_Click(object sender, EventArgs e)
+        {
+            using var form = new CityForm();
+            form.ShowDialog(this);
+        }
     }
 }
