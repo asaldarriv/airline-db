@@ -21,10 +21,10 @@
         private System.Windows.Forms.Button buttonRoutes;
         private System.Windows.Forms.Button buttonLayovers;
         private System.Windows.Forms.Button buttonFlights;
-        private System.Windows.Forms.Button buttonTickets; // Added buttonTickets
-        private System.Windows.Forms.Button buttonEmployeesFlights; // Added buttonEmployeesFlights
-        private System.Windows.Forms.Button buttonUsers; // Added buttonUsers
-        // Agrega aquí más botones según tus entidades...
+        private System.Windows.Forms.Button buttonTickets;
+        private System.Windows.Forms.Button buttonEmployeesFlights;
+        private System.Windows.Forms.Button buttonUsers;
+
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMenu;
 
         protected override void Dispose(bool disposing)

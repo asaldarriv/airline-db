@@ -12,9 +12,10 @@ namespace Airline.core.AirlineFacade
 
         public User? GetUserById(int id) => _manager.GetUserById(id);
 
-        public void AddUser(User user) => _manager.AddUser(user);
+        // Recibe la contraseña en texto plano
+        public void AddUser(User user, string plainPassword) => _manager.AddUser(user, plainPassword);
 
-        public void UpdateUser(User user) => _manager.UpdateUser(user);
+        public void UpdateUser(User user, string? plainPassword = null) => _manager.UpdateUser(user, plainPassword);
 
         public void DeleteUser(int id) => _manager.DeleteUser(id);
     }

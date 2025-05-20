@@ -123,7 +123,7 @@ namespace Airline.UI
                     IsActive = isActive,
                     CreatedAt = DateTime.Now
                 };
-                _facade.AddUser(newUser);
+                _facade.AddUser(newUser, password); // password en texto plano
             }
             else
             {
@@ -143,7 +143,7 @@ namespace Airline.UI
                     IsActive = isActive,
                     CreatedAt = DateTime.Now // O puedes mantener el original si lo deseas
                 };
-                _facade.UpdateUser(updatedUser);
+                _facade.UpdateUser(updatedUser, password); // password en texto plano
             }
 
             LoadUsers();
