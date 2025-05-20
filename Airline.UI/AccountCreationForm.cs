@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using Airline.core.AirlineEntities;
 using Airline.core.AirlineFacade;
@@ -8,25 +9,76 @@ namespace Airline.UI
     public partial class AccountCreationForm : Form
     {
         private const int CustomerRoleId = 2; // Adjust according to your DB
+        private const int ActiveContractStatusId = 1; // Set to the correct ID for "ACTIVE"
         private readonly UserFacade _facade = new();
+        private readonly CountryFacade _countryFacade = new();
+        private readonly DocumentTypeFacade _documentTypeFacade = new();
 
         public AccountCreationForm()
         {
             InitializeComponent();
+            LoadDocumentTypes();
+            LoadCountries();
+        }
+
+        private void LoadDocumentTypes()
+        {
+            var types = _documentTypeFacade.GetAllDocumentTypes();
+            comboBoxDocumentType.DataSource = null;
+            comboBoxDocumentType.DataSource = new List<DocumentType>(types);
+            comboBoxDocumentType.DisplayMember = "Name";
+            comboBoxDocumentType.ValueMember = "DocumentTypeId";
+        }
+
+        private void LoadCountries()
+        {
+            var countries = _countryFacade.GetAllCountries().ToList();
+            comboBoxCountry.DataSource = new List<Country>(countries);
+            comboBoxCountry.DisplayMember = "Name";
+            comboBoxCountry.ValueMember = "CountryId";
+
+            // Residence Country (optional)
+            var residenceCountries = new List<Country>(countries);
+            residenceCountries.Insert(0, new Country { CountryId = 0, Name = "(None)" });
+            comboBoxResidenceCountry.DataSource = residenceCountries;
+            comboBoxResidenceCountry.DisplayMember = "Name";
+            comboBoxResidenceCountry.ValueMember = "CountryId";
+
+            // Birth Country (optional)
+            var birthCountries = new List<Country>(countries);
+            birthCountries.Insert(0, new Country { CountryId = 0, Name = "(None)" });
+            comboBoxBirthCountry.DataSource = birthCountries;
+            comboBoxBirthCountry.DisplayMember = "Name";
+            comboBoxBirthCountry.ValueMember = "CountryId";
         }
 
         private void buttonCreateAccount_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(textBoxDocumentTypeId.Text, out int documentTypeId) ||
-                !int.TryParse(textBoxCountryId.Text, out int countryId))
+            // Document Type
+            if (comboBoxDocumentType.SelectedItem == null)
             {
-                MessageBox.Show("Document Type ID and Country ID are required and must be valid numbers.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a Document Type.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            int documentTypeId = (int)comboBoxDocumentType.SelectedValue;
 
-            int? residenceCountryId = string.IsNullOrWhiteSpace(textBoxResidenceCountryId.Text) ? null : int.Parse(textBoxResidenceCountryId.Text);
-            int? birthCountryId = string.IsNullOrWhiteSpace(textBoxBirthCountryId.Text) ? null : int.Parse(textBoxBirthCountryId.Text);
-            int? contractStatusId = string.IsNullOrWhiteSpace(textBoxContractStatusId.Text) ? null : int.Parse(textBoxContractStatusId.Text);
+            // Country
+            if (comboBoxCountry.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a Country.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int countryId = (int)comboBoxCountry.SelectedValue;
+
+            // Residence Country (optional)
+            int? residenceCountryId = null;
+            if (comboBoxResidenceCountry.SelectedValue is int resId && resId != 0)
+                residenceCountryId = resId;
+
+            // Birth Country (optional)
+            int? birthCountryId = null;
+            if (comboBoxBirthCountry.SelectedValue is int birthId && birthId != 0)
+                birthCountryId = birthId;
 
             var email = textBoxEmail.Text.Trim();
             var firstName = textBoxFirstName.Text.Trim();
@@ -69,7 +121,7 @@ namespace Airline.UI
                 DegreeTitle = degreeTitle,
                 ResidenceCountryId = residenceCountryId,
                 BirthCountryId = birthCountryId,
-                ContractStatusId = contractStatusId,
+                ContractStatusId = ActiveContractStatusId, // Always ACTIVE
                 Username = username,
                 IsActive = true,
                 CreatedAt = DateTime.Now

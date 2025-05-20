@@ -5,10 +5,10 @@ namespace Airline.UI
         private System.ComponentModel.IContainer components = null;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMain;
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.Label labelDocumentTypeId;
-        private System.Windows.Forms.TextBox textBoxDocumentTypeId;
-        private System.Windows.Forms.Label labelCountryId;
-        private System.Windows.Forms.TextBox textBoxCountryId;
+        private System.Windows.Forms.Label labelDocumentType;
+        private System.Windows.Forms.ComboBox comboBoxDocumentType;
+        private System.Windows.Forms.Label labelCountry;
+        private System.Windows.Forms.ComboBox comboBoxCountry;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label labelFirstName;
@@ -31,12 +31,10 @@ namespace Airline.UI
         private System.Windows.Forms.TextBox textBoxEducationLevel;
         private System.Windows.Forms.Label labelDegreeTitle;
         private System.Windows.Forms.TextBox textBoxDegreeTitle;
-        private System.Windows.Forms.Label labelResidenceCountryId;
-        private System.Windows.Forms.TextBox textBoxResidenceCountryId;
-        private System.Windows.Forms.Label labelBirthCountryId;
-        private System.Windows.Forms.TextBox textBoxBirthCountryId;
-        private System.Windows.Forms.Label labelContractStatusId;
-        private System.Windows.Forms.TextBox textBoxContractStatusId;
+        private System.Windows.Forms.Label labelResidenceCountry;
+        private System.Windows.Forms.ComboBox comboBoxResidenceCountry;
+        private System.Windows.Forms.Label labelBirthCountry;
+        private System.Windows.Forms.ComboBox comboBoxBirthCountry;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Label labelPassword;
@@ -55,10 +53,10 @@ namespace Airline.UI
         {
             tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
             labelTitle = new System.Windows.Forms.Label();
-            labelDocumentTypeId = new System.Windows.Forms.Label();
-            textBoxDocumentTypeId = new System.Windows.Forms.TextBox();
-            labelCountryId = new System.Windows.Forms.Label();
-            textBoxCountryId = new System.Windows.Forms.TextBox();
+            labelDocumentType = new System.Windows.Forms.Label();
+            comboBoxDocumentType = new System.Windows.Forms.ComboBox();
+            labelCountry = new System.Windows.Forms.Label();
+            comboBoxCountry = new System.Windows.Forms.ComboBox();
             labelEmail = new System.Windows.Forms.Label();
             textBoxEmail = new System.Windows.Forms.TextBox();
             labelFirstName = new System.Windows.Forms.Label();
@@ -81,12 +79,10 @@ namespace Airline.UI
             textBoxEducationLevel = new System.Windows.Forms.TextBox();
             labelDegreeTitle = new System.Windows.Forms.Label();
             textBoxDegreeTitle = new System.Windows.Forms.TextBox();
-            labelResidenceCountryId = new System.Windows.Forms.Label();
-            textBoxResidenceCountryId = new System.Windows.Forms.TextBox();
-            labelBirthCountryId = new System.Windows.Forms.Label();
-            textBoxBirthCountryId = new System.Windows.Forms.TextBox();
-            labelContractStatusId = new System.Windows.Forms.Label();
-            textBoxContractStatusId = new System.Windows.Forms.TextBox();
+            labelResidenceCountry = new System.Windows.Forms.Label();
+            comboBoxResidenceCountry = new System.Windows.Forms.ComboBox();
+            labelBirthCountry = new System.Windows.Forms.Label();
+            comboBoxBirthCountry = new System.Windows.Forms.ComboBox();
             labelUsername = new System.Windows.Forms.Label();
             textBoxUsername = new System.Windows.Forms.TextBox();
             labelPassword = new System.Windows.Forms.Label();
@@ -99,18 +95,18 @@ namespace Airline.UI
 
             // tableLayoutPanelMain
             tableLayoutPanelMain.ColumnCount = 2;
-            tableLayoutPanelMain.RowCount = 24;
+            tableLayoutPanelMain.RowCount = 22;
             tableLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             tableLayoutPanelMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             tableLayoutPanelMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            for (int i = 0; i < 24; i++)
+            for (int i = 0; i < 22; i++)
                 tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize));
             tableLayoutPanelMain.Controls.Add(labelTitle, 0, 0);
             tableLayoutPanelMain.SetColumnSpan(labelTitle, 2);
-            tableLayoutPanelMain.Controls.Add(labelDocumentTypeId, 0, 1);
-            tableLayoutPanelMain.Controls.Add(textBoxDocumentTypeId, 1, 1);
-            tableLayoutPanelMain.Controls.Add(labelCountryId, 0, 2);
-            tableLayoutPanelMain.Controls.Add(textBoxCountryId, 1, 2);
+            tableLayoutPanelMain.Controls.Add(labelDocumentType, 0, 1);
+            tableLayoutPanelMain.Controls.Add(comboBoxDocumentType, 1, 1);
+            tableLayoutPanelMain.Controls.Add(labelCountry, 0, 2);
+            tableLayoutPanelMain.Controls.Add(comboBoxCountry, 1, 2);
             tableLayoutPanelMain.Controls.Add(labelEmail, 0, 3);
             tableLayoutPanelMain.Controls.Add(textBoxEmail, 1, 3);
             tableLayoutPanelMain.Controls.Add(labelFirstName, 0, 4);
@@ -133,18 +129,16 @@ namespace Airline.UI
             tableLayoutPanelMain.Controls.Add(textBoxEducationLevel, 1, 12);
             tableLayoutPanelMain.Controls.Add(labelDegreeTitle, 0, 13);
             tableLayoutPanelMain.Controls.Add(textBoxDegreeTitle, 1, 13);
-            tableLayoutPanelMain.Controls.Add(labelResidenceCountryId, 0, 14);
-            tableLayoutPanelMain.Controls.Add(textBoxResidenceCountryId, 1, 14);
-            tableLayoutPanelMain.Controls.Add(labelBirthCountryId, 0, 15);
-            tableLayoutPanelMain.Controls.Add(textBoxBirthCountryId, 1, 15);
-            tableLayoutPanelMain.Controls.Add(labelContractStatusId, 0, 16);
-            tableLayoutPanelMain.Controls.Add(textBoxContractStatusId, 1, 16);
-            tableLayoutPanelMain.Controls.Add(labelUsername, 0, 17);
-            tableLayoutPanelMain.Controls.Add(textBoxUsername, 1, 17);
-            tableLayoutPanelMain.Controls.Add(labelPassword, 0, 18);
-            tableLayoutPanelMain.Controls.Add(textBoxPassword, 1, 18);
-            tableLayoutPanelMain.Controls.Add(buttonCreateAccount, 0, 20);
-            tableLayoutPanelMain.Controls.Add(buttonCancel, 1, 20);
+            tableLayoutPanelMain.Controls.Add(labelResidenceCountry, 0, 14);
+            tableLayoutPanelMain.Controls.Add(comboBoxResidenceCountry, 1, 14);
+            tableLayoutPanelMain.Controls.Add(labelBirthCountry, 0, 15);
+            tableLayoutPanelMain.Controls.Add(comboBoxBirthCountry, 1, 15);
+            tableLayoutPanelMain.Controls.Add(labelUsername, 0, 16);
+            tableLayoutPanelMain.Controls.Add(textBoxUsername, 1, 16);
+            tableLayoutPanelMain.Controls.Add(labelPassword, 0, 17);
+            tableLayoutPanelMain.Controls.Add(textBoxPassword, 1, 17);
+            tableLayoutPanelMain.Controls.Add(buttonCreateAccount, 0, 19);
+            tableLayoutPanelMain.Controls.Add(buttonCancel, 1, 19);
 
             // labelTitle
             labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -155,19 +149,21 @@ namespace Airline.UI
             labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             labelTitle.Dock = System.Windows.Forms.DockStyle.Fill;
 
-            // labelDocumentTypeId
-            labelDocumentTypeId.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            labelDocumentTypeId.AutoSize = true;
-            labelDocumentTypeId.Text = "Document Type ID*:";
-            textBoxDocumentTypeId.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            textBoxDocumentTypeId.Size = new System.Drawing.Size(250, 27);
+            // labelDocumentType
+            labelDocumentType.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            labelDocumentType.AutoSize = true;
+            labelDocumentType.Text = "Document Type*:";
+            comboBoxDocumentType.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            comboBoxDocumentType.Size = new System.Drawing.Size(250, 27);
+            comboBoxDocumentType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 
-            // labelCountryId
-            labelCountryId.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            labelCountryId.AutoSize = true;
-            labelCountryId.Text = "Country ID*:";
-            textBoxCountryId.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            textBoxCountryId.Size = new System.Drawing.Size(250, 27);
+            // labelCountry
+            labelCountry.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            labelCountry.AutoSize = true;
+            labelCountry.Text = "Country*:";
+            comboBoxCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            comboBoxCountry.Size = new System.Drawing.Size(250, 27);
+            comboBoxCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 
             // labelEmail
             labelEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -247,26 +243,21 @@ namespace Airline.UI
             textBoxDegreeTitle.Anchor = System.Windows.Forms.AnchorStyles.Left;
             textBoxDegreeTitle.Size = new System.Drawing.Size(250, 27);
 
-            // labelResidenceCountryId
-            labelResidenceCountryId.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            labelResidenceCountryId.AutoSize = true;
-            labelResidenceCountryId.Text = "Residence Country ID:";
-            textBoxResidenceCountryId.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            textBoxResidenceCountryId.Size = new System.Drawing.Size(250, 27);
+            // labelResidenceCountry
+            labelResidenceCountry.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            labelResidenceCountry.AutoSize = true;
+            labelResidenceCountry.Text = "Residence Country:";
+            comboBoxResidenceCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            comboBoxResidenceCountry.Size = new System.Drawing.Size(250, 27);
+            comboBoxResidenceCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 
-            // labelBirthCountryId
-            labelBirthCountryId.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            labelBirthCountryId.AutoSize = true;
-            labelBirthCountryId.Text = "Birth Country ID:";
-            textBoxBirthCountryId.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            textBoxBirthCountryId.Size = new System.Drawing.Size(250, 27);
-
-            // labelContractStatusId
-            labelContractStatusId.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            labelContractStatusId.AutoSize = true;
-            labelContractStatusId.Text = "Contract Status ID:";
-            textBoxContractStatusId.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            textBoxContractStatusId.Size = new System.Drawing.Size(250, 27);
+            // labelBirthCountry
+            labelBirthCountry.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            labelBirthCountry.AutoSize = true;
+            labelBirthCountry.Text = "Birth Country:";
+            comboBoxBirthCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            comboBoxBirthCountry.Size = new System.Drawing.Size(250, 27);
+            comboBoxBirthCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 
             // labelUsername
             labelUsername.Anchor = System.Windows.Forms.AnchorStyles.Right;
