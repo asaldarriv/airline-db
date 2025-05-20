@@ -2,169 +2,145 @@
 {
     partial class Login
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMain;
+        private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelFields;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelButtons;
+        private Airline.UI.Controls.ModernButton buttonLogin;
+        private Airline.UI.Controls.ModernButton buttonExit;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            pictureBoxLogo = new PictureBox();
-            labelTitle = new Label();
-            labelUsername = new Label();
-            labelPassword = new Label();
-            textBoxUsername = new TextBox();
-            textBoxPassword = new TextBox();
-            buttonLogin = new Button();
-            buttonExit = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
-            SuspendLayout();
-            // 
-            // pictureBoxLogo
-            // 
-            pictureBoxLogo.ImageLocation = "";
-            pictureBoxLogo.Location = new Point(0, 4);
-            pictureBoxLogo.Margin = new Padding(3, 4, 3, 4);
-            pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(298, 165);
-            pictureBoxLogo.TabIndex = 0;
-            pictureBoxLogo.TabStop = false;
-            pictureBoxLogo.Image = Properties.Resources.logoEafit;
-            // 
+            this.tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.flowLayoutPanelFields = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanelButtons = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonLogin = new Airline.UI.Controls.ModernButton();
+            this.buttonExit = new Airline.UI.Controls.ModernButton();
+
+            this.tableLayoutPanelMain.SuspendLayout();
+            this.flowLayoutPanelFields.SuspendLayout();
+            this.flowLayoutPanelButtons.SuspendLayout();
+            this.SuspendLayout();
+
+            // tableLayoutPanelMain
+            this.tableLayoutPanelMain.ColumnCount = 1;
+            this.tableLayoutPanelMain.RowCount = 3;
+            this.tableLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelMain.Controls.Add(this.labelTitle, 0, 0);
+            this.tableLayoutPanelMain.Controls.Add(this.flowLayoutPanelFields, 0, 1);
+            this.tableLayoutPanelMain.Controls.Add(this.flowLayoutPanelButtons, 0, 2);
+
             // labelTitle
-            // 
-            labelTitle.AutoSize = true;
-            labelTitle.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelTitle.ForeColor = Color.Navy;
-            labelTitle.Location = new Point(409, 60);
-            labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(321, 46);
-            labelTitle.TabIndex = 1;
-            labelTitle.Text = "Airline Application";
-            // 
+            this.labelTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            this.labelTitle.ForeColor = System.Drawing.Color.Navy;
+            this.labelTitle.Text = "Login";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTitle.AutoSize = true;
+
+            // flowLayoutPanelFields
+            this.flowLayoutPanelFields.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.flowLayoutPanelFields.AutoSize = true;
+            this.flowLayoutPanelFields.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanelFields.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelFields.WrapContents = false;
+            this.flowLayoutPanelFields.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.flowLayoutPanelFields.Controls.Add(this.labelUsername);
+            this.flowLayoutPanelFields.Controls.Add(this.textBoxUsername);
+            this.flowLayoutPanelFields.Controls.Add(this.labelPassword);
+            this.flowLayoutPanelFields.Controls.Add(this.textBoxPassword);
+
             // labelUsername
-            // 
-            labelUsername.AutoSize = true;
-            labelUsername.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelUsername.ForeColor = Color.Navy;
-            labelUsername.Location = new Point(189, 253);
-            labelUsername.Name = "labelUsername";
-            labelUsername.Size = new Size(189, 46);
-            labelUsername.TabIndex = 2;
-            labelUsername.Text = "Username:";
-            // 
-            // labelPassword
-            // 
-            labelPassword.AutoSize = true;
-            labelPassword.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelPassword.ForeColor = Color.Navy;
-            labelPassword.Location = new Point(136, 351);
-            labelPassword.Name = "labelPassword";
-            labelPassword.Size = new Size(180, 46);
-            labelPassword.TabIndex = 3;
-            labelPassword.Text = "Password:";
-            // 
+            this.labelUsername.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            this.labelUsername.Text = "Username:";
+            this.labelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
+
             // textBoxUsername
-            // 
-            textBoxUsername.BorderStyle = BorderStyle.FixedSingle;
-            textBoxUsername.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxUsername.Location = new Point(379, 253);
-            textBoxUsername.Margin = new Padding(3, 4, 3, 4);
-            textBoxUsername.Name = "textBoxUsername";
-            textBoxUsername.Size = new Size(228, 42);
-            textBoxUsername.TabIndex = 4;
-            // 
+            this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            this.textBoxUsername.Size = new System.Drawing.Size(260, 32);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+
+            // labelPassword
+            this.labelPassword.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            this.labelPassword.Text = "Password:";
+            this.labelPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
+
             // textBoxPassword
-            // 
-            textBoxPassword.BorderStyle = BorderStyle.FixedSingle;
-            textBoxPassword.Font = new Font("Segoe UI", 15.75F);
-            textBoxPassword.Location = new Point(379, 351);
-            textBoxPassword.Margin = new Padding(3, 4, 3, 4);
-            textBoxPassword.Name = "textBoxPassword";
-            textBoxPassword.Size = new Size(228, 42);
-            textBoxPassword.TabIndex = 5;
-            textBoxPassword.UseSystemPasswordChar = true;
-            // 
+            this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            this.textBoxPassword.Size = new System.Drawing.Size(260, 32);
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+
+            // flowLayoutPanelButtons
+            this.flowLayoutPanelButtons.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.flowLayoutPanelButtons.AutoSize = true;
+            this.flowLayoutPanelButtons.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanelButtons.FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight;
+            this.flowLayoutPanelButtons.WrapContents = false;
+            this.flowLayoutPanelButtons.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.flowLayoutPanelButtons.Controls.Add(this.buttonLogin);
+            this.flowLayoutPanelButtons.Controls.Add(this.buttonExit);
+
             // buttonLogin
-            // 
-            buttonLogin.BackColor = Color.Navy;
-            buttonLogin.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonLogin.ForeColor = Color.White;
-            buttonLogin.Location = new Point(240, 469);
-            buttonLogin.Margin = new Padding(3, 4, 3, 4);
-            buttonLogin.Name = "buttonLogin";
-            buttonLogin.Size = new Size(160, 73);
-            buttonLogin.TabIndex = 6;
-            buttonLogin.Text = "Login";
-            buttonLogin.UseVisualStyleBackColor = false;
-            buttonLogin.Click += ButtonLogin_Click;
-            // 
+            this.buttonLogin.Text = "Log In";
+            this.buttonLogin.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            this.buttonLogin.Size = new System.Drawing.Size(120, 40);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(30, 0, 30, 0);
+            this.buttonLogin.Click += new System.EventHandler(this.ButtonLogin_Click);
+
             // buttonExit
-            // 
-            buttonExit.BackColor = Color.Navy;
-            buttonExit.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonExit.ForeColor = Color.White;
-            buttonExit.Location = new Point(483, 469);
-            buttonExit.Margin = new Padding(3, 4, 3, 4);
-            buttonExit.Name = "buttonExit";
-            buttonExit.Size = new Size(160, 73);
-            buttonExit.TabIndex = 7;
-            buttonExit.Text = "Exit";
-            buttonExit.UseVisualStyleBackColor = false;
-            buttonExit.Click += ButtonExit_Click;
-            // 
+            this.buttonExit.Text = "Exit";
+            this.buttonExit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            this.buttonExit.Size = new System.Drawing.Size(120, 40);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(30, 0, 30, 0);
+            this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
+
             // Login
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
-            Controls.Add(buttonExit);
-            Controls.Add(buttonLogin);
-            Controls.Add(textBoxPassword);
-            Controls.Add(textBoxUsername);
-            Controls.Add(labelPassword);
-            Controls.Add(labelUsername);
-            Controls.Add(labelTitle);
-            Controls.Add(pictureBoxLogo);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "Login";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "EAFIT University - Airline - Login";
-            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(700, 500); // Más grande y responsivo
+            this.Controls.Add(this.tableLayoutPanelMain);
+            this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
+            this.BackColor = System.Drawing.Color.White;
+            // Elimina el tamaño fijo y permite redimensionar
+            // this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = true;
+            this.MinimizeBox = true;
+
+            this.tableLayoutPanelMain.ResumeLayout(false);
+            this.tableLayoutPanelMain.PerformLayout();
+            this.flowLayoutPanelFields.ResumeLayout(false);
+            this.flowLayoutPanelFields.PerformLayout();
+            this.flowLayoutPanelButtons.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
-
-        #endregion
-
-        private PictureBox pictureBoxLogo;
-        private Label labelTitle;
-        private Label labelUsername;
-        private Label labelPassword;
-        private TextBox textBoxUsername;
-        private TextBox textBoxPassword;
-        private Button buttonLogin;
-        private Button buttonExit;
     }
 }

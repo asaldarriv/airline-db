@@ -6,9 +6,9 @@ namespace Airline.UI
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMain;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelButtons;
-        private System.Windows.Forms.Button buttonCreateAccount;
-        private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.Button buttonViewFlights;
+        private Airline.UI.Controls.ModernButton buttonCreateAccount;
+        private Airline.UI.Controls.ModernButton buttonLogin;
+        private Airline.UI.Controls.ModernButton buttonViewFlights;
 
         protected override void Dispose(bool disposing)
         {
@@ -22,9 +22,9 @@ namespace Airline.UI
             tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
             labelTitle = new System.Windows.Forms.Label();
             flowLayoutPanelButtons = new System.Windows.Forms.FlowLayoutPanel();
-            buttonCreateAccount = new System.Windows.Forms.Button();
-            buttonLogin = new System.Windows.Forms.Button();
-            buttonViewFlights = new System.Windows.Forms.Button();
+            buttonCreateAccount = new Airline.UI.Controls.ModernButton();
+            buttonLogin = new Airline.UI.Controls.ModernButton();
+            buttonViewFlights = new Airline.UI.Controls.ModernButton();
 
             tableLayoutPanelMain.SuspendLayout();
             flowLayoutPanelButtons.SuspendLayout();
@@ -60,34 +60,36 @@ namespace Airline.UI
             flowLayoutPanelButtons.Controls.Add(buttonViewFlights);
 
             // buttonCreateAccount
-            buttonCreateAccount.Text = "Crear cuenta";
+            buttonCreateAccount.Text = "Create account";
             buttonCreateAccount.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonCreateAccount.Size = new System.Drawing.Size(300, 50);
+            buttonCreateAccount.Size = new System.Drawing.Size(320, 55);
             buttonCreateAccount.Margin = new System.Windows.Forms.Padding(20);
             buttonCreateAccount.Click += buttonCreateAccount_Click;
 
             // buttonLogin
-            buttonLogin.Text = "Iniciar sesión";
+            buttonLogin.Text = "Log In";
             buttonLogin.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonLogin.Size = new System.Drawing.Size(300, 50);
+            buttonLogin.Size = new System.Drawing.Size(320, 55);
             buttonLogin.Margin = new System.Windows.Forms.Padding(20);
             buttonLogin.Click += buttonLogin_Click;
 
             // buttonViewFlights
-            buttonViewFlights.Text = "Ver vuelos disponibles";
+            buttonViewFlights.Text = "See available flights";
             buttonViewFlights.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonViewFlights.Size = new System.Drawing.Size(300, 50);
+            buttonViewFlights.Size = new System.Drawing.Size(320, 55);
             buttonViewFlights.Margin = new System.Windows.Forms.Padding(20);
             buttonViewFlights.Click += buttonViewFlights_Click;
+            buttonViewFlights.Visible = false;
 
             // LandingForm
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(700, 500);
+            ClientSize = new System.Drawing.Size(900, 600);
             Controls.Add(tableLayoutPanelMain);
             Name = "LandingForm";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Airline EAFIT";
+            BackColor = System.Drawing.Color.White;
             tableLayoutPanelMain.ResumeLayout(false);
             tableLayoutPanelMain.PerformLayout();
             flowLayoutPanelButtons.ResumeLayout(false);

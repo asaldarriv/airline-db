@@ -17,6 +17,11 @@ namespace Airline.core.AirlineManager
 
         public User? GetUserById(int id) => _repository.GetById(id);
 
+        public User? GetUserByUsername(string username)
+        {
+            return _repository.GetByUsername(username);
+        }
+
         public void AddUser(User user, string plainPassword)
         {
             user.PasswordHash = PasswordUtils.ComputeSha256Hash(plainPassword);

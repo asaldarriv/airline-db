@@ -8,7 +8,7 @@ namespace Airline.UI
 {
     public partial class AccountCreationForm : Form
     {
-        private const int CustomerRoleId = 2; // Adjust according to your DB
+        private const int CustomerRoleId = 6; // Adjust according to your DB
         private const int ActiveContractStatusId = 1; // Set to the correct ID for "ACTIVE"
         private readonly UserFacade _facade = new();
         private readonly CountryFacade _countryFacade = new();

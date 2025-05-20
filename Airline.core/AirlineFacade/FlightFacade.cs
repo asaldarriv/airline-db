@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Airline.core.AirlineEntities;
 using Airline.core.AirlineManager;
@@ -17,5 +18,10 @@ namespace Airline.core.AirlineFacade
         public void UpdateFlight(Flight flight) => _manager.UpdateFlight(flight);
 
         public void DeleteFlight(int id) => _manager.DeleteFlight(id);
+
+        public IEnumerable<Flight> GetAvailableFlights(int originCityId, int destinationCityId, DateTime date)
+        {
+            return _manager.GetAvailableFlights(originCityId, destinationCityId, date);
+        }
     }
 }

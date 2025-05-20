@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
 using Airline.core.AirlineFacade;
+using Airline.core.AirlineEntities;
 
 namespace Airline.UI
 {
     public partial class Login : Form
     {
+        public User? AuthenticatedUser { get; private set; }
+
         public Login()
         {
             InitializeComponent();
@@ -40,6 +43,9 @@ namespace Airline.UI
 
                 if (isValid)
                 {
+                    var userFacade = new UserFacade();
+                    AuthenticatedUser = userFacade.GetUserByUsername(username);
+
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }

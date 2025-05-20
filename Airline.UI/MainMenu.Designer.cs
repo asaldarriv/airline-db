@@ -3,29 +3,27 @@
     partial class MainMenu
     {
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelTitle;
-        private System.Windows.Forms.Button buttonLogout;
-        private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.Button buttonDocumentTypes;
-        private System.Windows.Forms.Button buttonCountries;
-        private System.Windows.Forms.Button buttonCities;
-        private System.Windows.Forms.Button buttonLuggageTypes;
-        private System.Windows.Forms.Button buttonAirplaneStatuses;
-        private System.Windows.Forms.Button buttonFlightStatuses;
-        private System.Windows.Forms.Button buttonTicketStatuses;
-        private System.Windows.Forms.Button buttonContractsStatuses;
-        private System.Windows.Forms.Button buttonRoles;
-        private System.Windows.Forms.Button buttonLuggages;
-        private System.Windows.Forms.Button buttonAirplanes;
-        private System.Windows.Forms.Button buttonRoutes;
-        private System.Windows.Forms.Button buttonLayovers;
-        private System.Windows.Forms.Button buttonFlights;
-        private System.Windows.Forms.Button buttonTickets;
-        private System.Windows.Forms.Button buttonEmployeesFlights;
-        private System.Windows.Forms.Button buttonUsers;
-
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMenu;
+        private Airline.UI.Controls.ModernButton buttonLogout;
+        private Airline.UI.Controls.ModernButton buttonExit;
+        private Airline.UI.Controls.ModernButton buttonDocumentTypes;
+        private Airline.UI.Controls.ModernButton buttonCountries;
+        private Airline.UI.Controls.ModernButton buttonCities;
+        private Airline.UI.Controls.ModernButton buttonLuggageTypes;
+        private Airline.UI.Controls.ModernButton buttonAirplaneStatuses;
+        private Airline.UI.Controls.ModernButton buttonFlightStatuses;
+        private Airline.UI.Controls.ModernButton buttonTicketStatuses;
+        private Airline.UI.Controls.ModernButton buttonContractsStatuses;
+        private Airline.UI.Controls.ModernButton buttonRoles;
+        private Airline.UI.Controls.ModernButton buttonLuggages;
+        private Airline.UI.Controls.ModernButton buttonAirplanes;
+        private Airline.UI.Controls.ModernButton buttonRoutes;
+        private Airline.UI.Controls.ModernButton buttonLayovers;
+        private Airline.UI.Controls.ModernButton buttonFlights;
+        private Airline.UI.Controls.ModernButton buttonTickets;
+        private Airline.UI.Controls.ModernButton buttonEmployeesFlights;
+        private Airline.UI.Controls.ModernButton buttonUsers;
 
         protected override void Dispose(bool disposing)
         {
@@ -40,289 +38,166 @@
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
-            pictureBoxLogo = new System.Windows.Forms.PictureBox();
             labelTitle = new System.Windows.Forms.Label();
-            buttonLogout = new System.Windows.Forms.Button();
-            buttonExit = new System.Windows.Forms.Button();
-            buttonDocumentTypes = new System.Windows.Forms.Button();
-            buttonCountries = new System.Windows.Forms.Button();
-            buttonCities = new System.Windows.Forms.Button();
-            buttonLuggageTypes = new System.Windows.Forms.Button();
-            buttonAirplaneStatuses = new System.Windows.Forms.Button();
-            buttonFlightStatuses = new System.Windows.Forms.Button();
-            buttonTicketStatuses = new System.Windows.Forms.Button();
-            buttonContractsStatuses = new System.Windows.Forms.Button();
-            buttonRoles = new System.Windows.Forms.Button();
-            buttonLuggages = new System.Windows.Forms.Button();
-            buttonAirplanes = new System.Windows.Forms.Button();
-            buttonRoutes = new System.Windows.Forms.Button();
-            buttonLayovers = new System.Windows.Forms.Button();
-            buttonFlights = new System.Windows.Forms.Button();
-            buttonTickets = new System.Windows.Forms.Button(); // Added buttonTickets initialization
-            buttonEmployeesFlights = new System.Windows.Forms.Button(); // Added buttonEmployeesFlights initialization
-            buttonUsers = new System.Windows.Forms.Button(); // Added buttonUsers initialization
-            // Instancia aquí más botones si los tienes...
             tableLayoutPanelMenu = new System.Windows.Forms.TableLayoutPanel();
-
-            ((System.ComponentModel.ISupportInitialize)(pictureBoxLogo)).BeginInit();
-            SuspendLayout();
-
-            // pictureBoxLogo
-            pictureBoxLogo.ImageLocation = "";
-            pictureBoxLogo.Location = new System.Drawing.Point(1, 1);
-            pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new System.Drawing.Size(261, 124);
-            pictureBoxLogo.TabIndex = 1;
-            pictureBoxLogo.TabStop = false;
-            pictureBoxLogo.Image = Properties.Resources.logoEafit;
-
-            // labelTitle
-            labelTitle.AutoSize = true;
-            labelTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            labelTitle.ForeColor = System.Drawing.Color.Navy;
-            labelTitle.Location = new System.Drawing.Point(300, 30);
-            labelTitle.Name = "labelTitle";
-            labelTitle.Size = new System.Drawing.Size(220, 37);
-            labelTitle.TabIndex = 2;
-            labelTitle.Text = "Main Menu";
-
-            // tableLayoutPanelMenu
-            tableLayoutPanelMenu.ColumnCount = 2;
-            tableLayoutPanelMenu.RowCount = 0; // Se ajusta automáticamente
-            tableLayoutPanelMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            tableLayoutPanelMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            tableLayoutPanelMenu.Location = new System.Drawing.Point(100, 150);
-            tableLayoutPanelMenu.Name = "tableLayoutPanelMenu";
-            tableLayoutPanelMenu.Size = new System.Drawing.Size(600, 250);
-            tableLayoutPanelMenu.TabIndex = 3;
-            tableLayoutPanelMenu.AutoSize = true;
-            tableLayoutPanelMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-
-            // buttonDocumentTypes
-            buttonDocumentTypes.BackColor = System.Drawing.Color.Navy;
-            buttonDocumentTypes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonDocumentTypes.ForeColor = System.Drawing.Color.White;
-            buttonDocumentTypes.Name = "buttonDocumentTypes";
-            buttonDocumentTypes.Text = "Document Types";
-            buttonDocumentTypes.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonDocumentTypes.Margin = new System.Windows.Forms.Padding(10);
+            buttonLogout = new Airline.UI.Controls.ModernButton();
+            buttonLogout.Click += ButtonLogout_Click;
+            buttonExit = new Airline.UI.Controls.ModernButton();
+            buttonExit.Click += ButtonExit_Click;
+            buttonDocumentTypes = new Airline.UI.Controls.ModernButton();
             buttonDocumentTypes.Click += ButtonDocumentTypes_Click;
-
-            // buttonCountries
-            buttonCountries.BackColor = System.Drawing.Color.Navy;
-            buttonCountries.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonCountries.ForeColor = System.Drawing.Color.White;
-            buttonCountries.Name = "buttonCountries";
-            buttonCountries.Text = "Countries";
-            buttonCountries.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonCountries.Margin = new System.Windows.Forms.Padding(10);
+            buttonCountries = new Airline.UI.Controls.ModernButton();
             buttonCountries.Click += ButtonCountries_Click;
-
-            // buttonCities
-            buttonCities.BackColor = System.Drawing.Color.Navy;
-            buttonCities.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonCities.ForeColor = System.Drawing.Color.White;
-            buttonCities.Name = "buttonCities";
-            buttonCities.Text = "Cities";
-            buttonCities.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonCities.Margin = new System.Windows.Forms.Padding(10);
+            buttonCities = new Airline.UI.Controls.ModernButton();
             buttonCities.Click += ButtonCities_Click;
-
-            // buttonLuggageTypes
-            buttonLuggageTypes.BackColor = System.Drawing.Color.Navy;
-            buttonLuggageTypes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonLuggageTypes.ForeColor = System.Drawing.Color.White;
-            buttonLuggageTypes.Name = "buttonLuggageTypes";
-            buttonLuggageTypes.Text = "Luggage Types";
-            buttonLuggageTypes.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonLuggageTypes.Margin = new System.Windows.Forms.Padding(10);
+            buttonLuggageTypes = new Airline.UI.Controls.ModernButton();
             buttonLuggageTypes.Click += ButtonLuggageTypes_Click;
-
-            // buttonAirplaneStatuses
-            buttonAirplaneStatuses.BackColor = System.Drawing.Color.Navy;
-            buttonAirplaneStatuses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonAirplaneStatuses.ForeColor = System.Drawing.Color.White;
-            buttonAirplaneStatuses.Name = "buttonAirplaneStatuses";
-            buttonAirplaneStatuses.Text = "Airplane Statuses";
-            buttonAirplaneStatuses.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonAirplaneStatuses.Margin = new System.Windows.Forms.Padding(10);
+            buttonAirplaneStatuses = new Airline.UI.Controls.ModernButton();
             buttonAirplaneStatuses.Click += ButtonAirplaneStatuses_Click;
-
-            // buttonFlightStatuses
-            buttonFlightStatuses.BackColor = System.Drawing.Color.Navy;
-            buttonFlightStatuses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonFlightStatuses.ForeColor = System.Drawing.Color.White;
-            buttonFlightStatuses.Name = "buttonFlightStatuses";
-            buttonFlightStatuses.Text = "Flight Statuses";
-            buttonFlightStatuses.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonFlightStatuses.Margin = new System.Windows.Forms.Padding(10);
+            buttonFlightStatuses = new Airline.UI.Controls.ModernButton();
             buttonFlightStatuses.Click += ButtonFlightStatuses_Click;
-
-            // buttonTicketStatuses
-            buttonTicketStatuses.BackColor = System.Drawing.Color.Navy;
-            buttonTicketStatuses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonTicketStatuses.ForeColor = System.Drawing.Color.White;
-            buttonTicketStatuses.Name = "buttonTicketStatuses";
-            buttonTicketStatuses.Text = "Ticket Statuses";
-            buttonTicketStatuses.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonTicketStatuses.Margin = new System.Windows.Forms.Padding(10);
+            buttonTicketStatuses = new Airline.UI.Controls.ModernButton();
             buttonTicketStatuses.Click += ButtonTicketStatuses_Click;
-
-            // buttonContractsStatuses
-            buttonContractsStatuses.BackColor = System.Drawing.Color.Navy;
-            buttonContractsStatuses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonContractsStatuses.ForeColor = System.Drawing.Color.White;
-            buttonContractsStatuses.Name = "buttonContractsStatuses";
-            buttonContractsStatuses.Text = "Contracts Statuses";
-            buttonContractsStatuses.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonContractsStatuses.Margin = new System.Windows.Forms.Padding(10);
+            buttonContractsStatuses = new Airline.UI.Controls.ModernButton();
             buttonContractsStatuses.Click += ButtonContractsStatuses_Click;
-
-            // buttonRoles
-            buttonRoles.BackColor = System.Drawing.Color.Navy;
-            buttonRoles.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonRoles.ForeColor = System.Drawing.Color.White;
-            buttonRoles.Name = "buttonRoles";
-            buttonRoles.Text = "Roles";
-            buttonRoles.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonRoles.Margin = new System.Windows.Forms.Padding(10);
+            buttonRoles = new Airline.UI.Controls.ModernButton();
             buttonRoles.Click += ButtonRoles_Click;
-
-            // buttonLuggages
-            buttonLuggages.BackColor = System.Drawing.Color.Navy;
-            buttonLuggages.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonLuggages.ForeColor = System.Drawing.Color.White;
-            buttonLuggages.Name = "buttonLuggages";
-            buttonLuggages.Text = "Luggages";
-            buttonLuggages.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonLuggages.Margin = new System.Windows.Forms.Padding(10);
+            buttonLuggages = new Airline.UI.Controls.ModernButton();
             buttonLuggages.Click += ButtonLuggages_Click;
-
-            // buttonAirplanes
-            buttonAirplanes.BackColor = System.Drawing.Color.Navy;
-            buttonAirplanes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonAirplanes.ForeColor = System.Drawing.Color.White;
-            buttonAirplanes.Name = "buttonAirplanes";
-            buttonAirplanes.Text = "Airplanes";
-            buttonAirplanes.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonAirplanes.Margin = new System.Windows.Forms.Padding(10);
+            buttonAirplanes = new Airline.UI.Controls.ModernButton();
             buttonAirplanes.Click += ButtonAirplanes_Click;
-
-            // buttonRoutes
-            buttonRoutes.BackColor = System.Drawing.Color.Navy;
-            buttonRoutes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonRoutes.ForeColor = System.Drawing.Color.White;
-            buttonRoutes.Name = "buttonRoutes";
-            buttonRoutes.Text = "Routes";
-            buttonRoutes.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonRoutes.Margin = new System.Windows.Forms.Padding(10);
+            buttonRoutes = new Airline.UI.Controls.ModernButton();
             buttonRoutes.Click += ButtonRoutes_Click;
-
-            // buttonLayovers
-            buttonLayovers.BackColor = System.Drawing.Color.Navy;
-            buttonLayovers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonLayovers.ForeColor = System.Drawing.Color.White;
-            buttonLayovers.Name = "buttonLayovers";
-            buttonLayovers.Text = "Layovers";
-            buttonLayovers.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonLayovers.Margin = new System.Windows.Forms.Padding(10);
+            buttonLayovers = new Airline.UI.Controls.ModernButton();
             buttonLayovers.Click += ButtonLayovers_Click;
-
-            // buttonFlights
-            buttonFlights.BackColor = System.Drawing.Color.Navy;
-            buttonFlights.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonFlights.ForeColor = System.Drawing.Color.White;
-            buttonFlights.Name = "buttonFlights";
-            buttonFlights.Text = "Flights";
-            buttonFlights.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonFlights.Margin = new System.Windows.Forms.Padding(10);
+            buttonFlights = new Airline.UI.Controls.ModernButton();
             buttonFlights.Click += ButtonFlights_Click;
-
-            // buttonTickets
-            buttonTickets.BackColor = System.Drawing.Color.Navy;
-            buttonTickets.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonTickets.ForeColor = System.Drawing.Color.White;
-            buttonTickets.Name = "buttonTickets";
-            buttonTickets.Text = "Tickets";
-            buttonTickets.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonTickets.Margin = new System.Windows.Forms.Padding(10);
+            buttonTickets = new Airline.UI.Controls.ModernButton();
             buttonTickets.Click += ButtonTickets_Click;
-
-            // buttonEmployeesFlights
-            buttonEmployeesFlights.BackColor = System.Drawing.Color.Navy;
-            buttonEmployeesFlights.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonEmployeesFlights.ForeColor = System.Drawing.Color.White;
-            buttonEmployeesFlights.Name = "buttonEmployeesFlights";
-            buttonEmployeesFlights.Text = "Employees - Flights";
-            buttonEmployeesFlights.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonEmployeesFlights.Margin = new System.Windows.Forms.Padding(10);
+            buttonEmployeesFlights = new Airline.UI.Controls.ModernButton();
             buttonEmployeesFlights.Click += ButtonEmployeesFlights_Click;
-
-            // buttonUsers
-            buttonUsers.BackColor = System.Drawing.Color.Navy;
-            buttonUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonUsers.ForeColor = System.Drawing.Color.White;
-            buttonUsers.Name = "buttonUsers";
-            buttonUsers.Text = "Users";
-            buttonUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonUsers.Margin = new System.Windows.Forms.Padding(10);
+            buttonUsers = new Airline.UI.Controls.ModernButton();
             buttonUsers.Click += ButtonUsers_Click;
 
-            // buttonLogout
-            buttonLogout.BackColor = System.Drawing.Color.Navy;
-            buttonLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonLogout.ForeColor = System.Drawing.Color.White;
-            buttonLogout.Name = "buttonLogout";
-            buttonLogout.Text = "Log Out";
-            buttonLogout.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonLogout.Margin = new System.Windows.Forms.Padding(10);
-            buttonLogout.Click += ButtonLogout_Click;
-
-            // buttonExit
-            buttonExit.BackColor = System.Drawing.Color.Navy;
-            buttonExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            buttonExit.ForeColor = System.Drawing.Color.White;
-            buttonExit.Name = "buttonExit";
-            buttonExit.Text = "Exit";
-            buttonExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            buttonExit.Margin = new System.Windows.Forms.Padding(10);
-            buttonExit.Click += ButtonExit_Click;
-
-            // Añade los botones al TableLayoutPanel
-            tableLayoutPanelMenu.Controls.Add(buttonDocumentTypes, 0, 0);
-            tableLayoutPanelMenu.Controls.Add(buttonCountries, 1, 0);
-            tableLayoutPanelMenu.Controls.Add(buttonCities, 0, 1);
-            tableLayoutPanelMenu.Controls.Add(buttonLuggageTypes, 1, 1);
-            tableLayoutPanelMenu.Controls.Add(buttonAirplaneStatuses, 0, 2);
-            tableLayoutPanelMenu.Controls.Add(buttonFlightStatuses, 1, 2);
-            tableLayoutPanelMenu.Controls.Add(buttonTicketStatuses, 0, 3);
-            tableLayoutPanelMenu.Controls.Add(buttonContractsStatuses, 1, 3);
-            tableLayoutPanelMenu.Controls.Add(buttonLogout, 0, 4);
-            tableLayoutPanelMenu.Controls.Add(buttonExit, 1, 4);
-            tableLayoutPanelMenu.Controls.Add(buttonRoles, 1, 5);
-            tableLayoutPanelMenu.Controls.Add(buttonLuggages, 0, 5);
-            tableLayoutPanelMenu.Controls.Add(buttonAirplanes, 1, 5);
-            tableLayoutPanelMenu.Controls.Add(buttonRoutes, 0, 6);
-            tableLayoutPanelMenu.Controls.Add(buttonLayovers, 1, 6);
-            tableLayoutPanelMenu.Controls.Add(buttonFlights, 0, 7);
-            tableLayoutPanelMenu.Controls.Add(buttonTickets, 1, 7); // Added buttonTickets to TableLayoutPanel
-            tableLayoutPanelMenu.Controls.Add(buttonEmployeesFlights, 1, 8); // Added buttonEmployeesFlights to TableLayoutPanel
-            tableLayoutPanelMenu.Controls.Add(buttonUsers, 0, 9); // Added buttonUsers to TableLayoutPanel
+            SuspendLayout();
 
             // MainMenu
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(800, 450);
-            Controls.Add(tableLayoutPanelMenu);
-            Controls.Add(labelTitle);
-            Controls.Add(pictureBoxLogo);
-            Name = "MainMenu";
+            ClientSize = new System.Drawing.Size(1200, 800);
+            BackColor = System.Drawing.Color.White;
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "Main Menu";
-            ((System.ComponentModel.ISupportInitialize)(pictureBoxLogo)).EndInit();
+            MaximizeBox = true;
+            MinimizeBox = true;
+
+            // labelTitle
+            labelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            labelTitle.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelTitle.ForeColor = System.Drawing.Color.Navy;
+            labelTitle.Text = "Main Menu";
+            labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            labelTitle.AutoSize = true;
+            labelTitle.Margin = new System.Windows.Forms.Padding(0, 30, 0, 30);
+
+            // tableLayoutPanelMenu
+            tableLayoutPanelMenu.ColumnCount = 4;
+            tableLayoutPanelMenu.RowCount = 6;
+            tableLayoutPanelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            tableLayoutPanelMenu.ColumnStyles.Clear();
+            for (int i = 0; i < 4; i++)
+                tableLayoutPanelMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            for (int i = 0; i < 6; i++)
+                tableLayoutPanelMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66F));
+            tableLayoutPanelMenu.Padding = new System.Windows.Forms.Padding(40, 20, 40, 20);
+
+            // Botones principales (tamaño fijo, centrados)
+            var allButtons = new System.Windows.Forms.Button[]
+            {
+                buttonDocumentTypes, buttonCountries, buttonCities, buttonLuggageTypes,
+                buttonAirplaneStatuses, buttonFlightStatuses, buttonTicketStatuses, buttonContractsStatuses,
+                buttonRoles, buttonLuggages, buttonAirplanes, buttonRoutes,
+                buttonLayovers, buttonFlights, buttonTickets, buttonEmployeesFlights,
+                buttonUsers
+            };
+            foreach (var btn in allButtons)
+            {
+                btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+                btn.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+                btn.Margin = new System.Windows.Forms.Padding(20);
+                btn.Size = new System.Drawing.Size(260, 70);
+                btn.BackColor = System.Drawing.Color.White;
+                btn.ForeColor = System.Drawing.Color.Black;
+            }
+
+            // Añade los botones al TableLayoutPanel (4 columnas x 6 filas)
+            tableLayoutPanelMenu.Controls.Add(buttonDocumentTypes, 0, 0);
+            tableLayoutPanelMenu.Controls.Add(buttonCountries, 1, 0);
+            tableLayoutPanelMenu.Controls.Add(buttonCities, 2, 0);
+            tableLayoutPanelMenu.Controls.Add(buttonLuggageTypes, 3, 0);
+
+            tableLayoutPanelMenu.Controls.Add(buttonAirplaneStatuses, 0, 1);
+            tableLayoutPanelMenu.Controls.Add(buttonFlightStatuses, 1, 1);
+            tableLayoutPanelMenu.Controls.Add(buttonTicketStatuses, 2, 1);
+            tableLayoutPanelMenu.Controls.Add(buttonContractsStatuses, 3, 1);
+
+            tableLayoutPanelMenu.Controls.Add(buttonRoles, 0, 2);
+            tableLayoutPanelMenu.Controls.Add(buttonLuggages, 1, 2);
+            tableLayoutPanelMenu.Controls.Add(buttonAirplanes, 2, 2);
+            tableLayoutPanelMenu.Controls.Add(buttonRoutes, 3, 2);
+
+            tableLayoutPanelMenu.Controls.Add(buttonLayovers, 0, 3);
+            tableLayoutPanelMenu.Controls.Add(buttonFlights, 1, 3);
+            tableLayoutPanelMenu.Controls.Add(buttonTickets, 2, 3);
+            tableLayoutPanelMenu.Controls.Add(buttonEmployeesFlights, 3, 3);
+
+            tableLayoutPanelMenu.Controls.Add(buttonUsers, 0, 4);
+
+            // FlowLayoutPanel para Log Out y Exit centrados abajo
+            var flowPanelBottom = new System.Windows.Forms.FlowLayoutPanel();
+            flowPanelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            flowPanelBottom.FlowDirection = System.Windows.Forms.FlowDirection.LeftToRight;
+            flowPanelBottom.AutoSize = true;
+            flowPanelBottom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            flowPanelBottom.WrapContents = false;
+            flowPanelBottom.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            flowPanelBottom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            flowPanelBottom.Controls.Add(buttonLogout);
+            flowPanelBottom.Controls.Add(buttonExit);
+
+            buttonLogout.Text = "Log Out";
+            buttonLogout.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonLogout.Size = new System.Drawing.Size(180, 50);
+            buttonLogout.Margin = new System.Windows.Forms.Padding(60, 0, 60, 0);
+            buttonLogout.BackColor = System.Drawing.Color.White;
+            buttonLogout.ForeColor = System.Drawing.Color.Black;
+            buttonLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
+
+            buttonExit.Text = "Exit";
+            buttonExit.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonExit.Size = new System.Drawing.Size(180, 50);
+            buttonExit.Margin = new System.Windows.Forms.Padding(60, 0, 60, 0);
+            buttonExit.BackColor = System.Drawing.Color.White;
+            buttonExit.ForeColor = System.Drawing.Color.Black;
+            buttonExit.Anchor = System.Windows.Forms.AnchorStyles.None;
+
+            // Estructura principal
+            var tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
+            tableLayoutPanelMain.ColumnCount = 1;
+            tableLayoutPanelMain.RowCount = 3;
+            tableLayoutPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            tableLayoutPanelMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F)); // Título
+            tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F)); // Botones
+            tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F)); // Log Out / Exit
+            tableLayoutPanelMain.Controls.Add(labelTitle, 0, 0);
+            tableLayoutPanelMain.Controls.Add(tableLayoutPanelMenu, 0, 1);
+            tableLayoutPanelMain.Controls.Add(flowPanelBottom, 0, 2);
+
+            Controls.Clear();
+            Controls.Add(tableLayoutPanelMain);
+
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

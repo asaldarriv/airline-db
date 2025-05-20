@@ -8,6 +8,7 @@ namespace Airline.core.AirlineRepository
     {
         IEnumerable<User> GetAll();
         User? GetById(int id);
+        User? GetByUsername(string username);
         void Add(User user);
         void Update(User user);
         void Delete(int id);
@@ -59,6 +60,43 @@ namespace Airline.core.AirlineRepository
             using var connection = _connectionManager.OpenConnection();
             using var command = new MySqlCommand("SELECT * FROM USERS WHERE user_id = @id", connection);
             command.Parameters.AddWithValue("@id", id);
+            using var reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                return new User
+                {
+                    UserId = reader.GetInt32("user_id"),
+                    DocumentTypeId = reader.GetInt32("document_type_id"),
+                    CountryId = reader.GetInt32("country_id"),
+                    RoleId = reader.GetInt32("role_id"),
+                    Email = reader.GetString("email"),
+                    FirstName = reader.GetString("first_name"),
+                    SecondName = reader.IsDBNull("second_name") ? null : reader.GetString("second_name"),
+                    FirstLastName = reader.GetString("first_last_name"),
+                    SecondLastName = reader.IsDBNull("second_last_name") ? null : reader.GetString("second_last_name"),
+                    PhoneNumber = reader.GetString("phone_number"),
+                    Address = reader.GetString("address"),
+                    BirthDate = reader.GetDateTime("birth_date"),
+                    TrainingInstitution = reader.IsDBNull("training_institution") ? null : reader.GetString("training_institution"),
+                    EducationLevel = reader.IsDBNull("education_level") ? null : reader.GetString("education_level"),
+                    DegreeTitle = reader.IsDBNull("degree_title") ? null : reader.GetString("degree_title"),
+                    ResidenceCountryId = reader.IsDBNull("residence_country_id") ? null : reader.GetInt32("residence_country_id"),
+                    BirthCountryId = reader.IsDBNull("birth_country_id") ? null : reader.GetInt32("birth_country_id"),
+                    ContractStatusId = reader.IsDBNull("contract_status_id") ? null : reader.GetInt32("contract_status_id"),
+                    Username = reader.GetString("username"),
+                    PasswordHash = reader.GetString("password_hash"),
+                    IsActive = reader.GetBoolean("is_active"),
+                    CreatedAt = reader.GetDateTime("created_at")
+                };
+            }
+            return null;
+        }
+
+        public User? GetByUsername(string username)
+        {
+            using var connection = _connectionManager.OpenConnection();
+            using var command = new MySqlCommand("SELECT * FROM USERS WHERE username = @username", connection);
+            command.Parameters.AddWithValue("@username", username);
             using var reader = command.ExecuteReader();
             if (reader.Read())
             {

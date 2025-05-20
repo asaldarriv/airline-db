@@ -11,8 +11,11 @@ namespace Airline.core.AirlineFacade
         public IEnumerable<User> GetAllUsers() => _manager.GetAllUsers();
 
         public User? GetUserById(int id) => _manager.GetUserById(id);
+        public User? GetUserByUsername(string username)
+        {
+            return _manager.GetUserByUsername(username);
+        }
 
-        // Recibe la contraseña en texto plano
         public void AddUser(User user, string plainPassword) => _manager.AddUser(user, plainPassword);
 
         public void UpdateUser(User user, string? plainPassword = null) => _manager.UpdateUser(user, plainPassword);

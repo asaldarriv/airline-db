@@ -19,12 +19,24 @@ namespace Airline.UI
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             using var form = new Login();
-            if (form.ShowDialog(this) == DialogResult.OK)
+            if (form.ShowDialog(this) == DialogResult.OK && form.AuthenticatedUser != null)
             {
                 Hide();
-                using (var mainMenu = new MainMenu())
+
+                // El ID de CUSTOMER según tu base de datos es 6
+                if (form.AuthenticatedUser.RoleId == 6)
                 {
-                    mainMenu.ShowDialog();
+                    using (var ticketPurchaseForm = new TicketPurchaseForm(form.AuthenticatedUser))
+                    {
+                        ticketPurchaseForm.ShowDialog();
+                    }
+                }
+                else
+                {
+                    using (var mainMenu = new MainMenu())
+                    {
+                        mainMenu.ShowDialog();
+                    }
                 }
                 Show();
             }
