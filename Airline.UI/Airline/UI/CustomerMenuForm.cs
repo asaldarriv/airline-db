@@ -45,13 +45,19 @@ namespace Airline.UI
 
         private void buttonPay_Click(object sender, EventArgs e)
         {
-            if (dataGridViewTickets.CurrentRow == null)
+            var row = dataGridViewTickets.CurrentRow;
+            if (row == null || row.Cells["TicketId"].Value == null)
             {
-                MessageBox.Show("Please select a ticket.", "Selection", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please select a valid ticket.", "Selection", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            var ticketId = (int)dataGridViewTickets.CurrentRow.Cells["TicketId"].Value;
+            if (!int.TryParse(row.Cells["TicketId"].Value.ToString(), out var ticketId))
+            {
+                MessageBox.Show("Invalid ticket ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             var ticket = _ticketFacade.GetAllTickets().FirstOrDefault(t => t.TicketId == ticketId);
 
             if (ticket == null)

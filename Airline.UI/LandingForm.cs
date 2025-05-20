@@ -31,6 +31,14 @@ namespace Airline.UI
                         customerMenu.ShowDialog();
                     }
                 }
+                // PILOT, COPILOT, FLIGHT_ATTENDANT, AUXILIARY: 2, 3, 4, 5 (ajusta según tus IDs)
+                else if (form.AuthenticatedUser.RoleId is 2 or 3 or 4 or 5)
+                {
+                    using (var employeeMenu = new EmployeeMenuForm(form.AuthenticatedUser))
+                    {
+                        employeeMenu.ShowDialog();
+                    }
+                }
                 else
                 {
                     using (var mainMenu = new MainMenu())
