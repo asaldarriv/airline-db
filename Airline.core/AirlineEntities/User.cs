@@ -3,9 +3,9 @@ namespace Airline.core.AirlineEntities
     public class User
     {
         public int UserId { get; set; }
-        public int? DocumentTypeId { get; set; }
-        public int? CountryId { get; set; }
-        public int? RoleId { get; set; }
+        public int DocumentTypeId { get; set; }
+        public int CountryId { get; set; }
+        public int RoleId { get; set; }
         public string Email { get; set; } = string.Empty;
         public string FirstName { get; set; } = string.Empty;
         public string? SecondName { get; set; }

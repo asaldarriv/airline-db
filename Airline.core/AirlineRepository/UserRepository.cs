@@ -28,9 +28,9 @@ namespace Airline.core.AirlineRepository
                 users.Add(new User
                 {
                     UserId = reader.GetInt32("user_id"),
-                    DocumentTypeId = reader.IsDBNull("document_type_id") ? null : reader.GetInt32("document_type_id"),
-                    CountryId = reader.IsDBNull("country_id") ? null : reader.GetInt32("country_id"),
-                    RoleId = reader.IsDBNull("role_id") ? null : reader.GetInt32("role_id"),
+                    DocumentTypeId = reader.GetInt32("document_type_id"),
+                    CountryId = reader.GetInt32("country_id"),
+                    RoleId = reader.GetInt32("role_id"),
                     Email = reader.GetString("email"),
                     FirstName = reader.GetString("first_name"),
                     SecondName = reader.IsDBNull("second_name") ? null : reader.GetString("second_name"),
@@ -65,9 +65,9 @@ namespace Airline.core.AirlineRepository
                 return new User
                 {
                     UserId = reader.GetInt32("user_id"),
-                    DocumentTypeId = reader.IsDBNull("document_type_id") ? null : reader.GetInt32("document_type_id"),
-                    CountryId = reader.IsDBNull("country_id") ? null : reader.GetInt32("country_id"),
-                    RoleId = reader.IsDBNull("role_id") ? null : reader.GetInt32("role_id"),
+                    DocumentTypeId = reader.GetInt32("document_type_id"),
+                    CountryId = reader.GetInt32("country_id"),
+                    RoleId = reader.GetInt32("role_id"),
                     Email = reader.GetString("email"),
                     FirstName = reader.GetString("first_name"),
                     SecondName = reader.IsDBNull("second_name") ? null : reader.GetString("second_name"),
@@ -98,9 +98,9 @@ namespace Airline.core.AirlineRepository
             using var command = new MySqlCommand(
                 @"INSERT INTO USERS (document_type_id, country_id, role_id, email, first_name, second_name, first_last_name, second_last_name, phone_number, address, birth_date, training_institution, education_level, degree_title, residence_country_id, birth_country_id, contract_status_id, username, password_hash, is_active, created_at)
                   VALUES (@docType, @country, @role, @email, @firstName, @secondName, @firstLastName, @secondLastName, @phone, @address, @birthDate, @training, @education, @degree, @residence, @birthCountry, @contractStatus, @username, @password, @active, @createdAt)", connection);
-            command.Parameters.AddWithValue("@docType", (object?)user.DocumentTypeId ?? DBNull.Value);
-            command.Parameters.AddWithValue("@country", (object?)user.CountryId ?? DBNull.Value);
-            command.Parameters.AddWithValue("@role", (object?)user.RoleId ?? DBNull.Value);
+            command.Parameters.AddWithValue("@docType", user.DocumentTypeId);
+            command.Parameters.AddWithValue("@country", user.CountryId);
+            command.Parameters.AddWithValue("@role", user.RoleId);
             command.Parameters.AddWithValue("@email", user.Email);
             command.Parameters.AddWithValue("@firstName", user.FirstName);
             command.Parameters.AddWithValue("@secondName", (object?)user.SecondName ?? DBNull.Value);
@@ -128,9 +128,9 @@ namespace Airline.core.AirlineRepository
             using var connection = _connectionManager.OpenConnection();
             using var command = new MySqlCommand(
                 @"UPDATE USERS SET document_type_id = @docType, country_id = @country, role_id = @role, email = @email, first_name = @firstName, second_name = @secondName, first_last_name = @firstLastName, second_last_name = @secondLastName, phone_number = @phone, address = @address, birth_date = @birthDate, training_institution = @training, education_level = @education, degree_title = @degree, residence_country_id = @residence, birth_country_id = @birthCountry, contract_status_id = @contractStatus, username = @username, password_hash = @password, is_active = @active WHERE user_id = @id", connection);
-            command.Parameters.AddWithValue("@docType", (object?)user.DocumentTypeId ?? DBNull.Value);
-            command.Parameters.AddWithValue("@country", (object?)user.CountryId ?? DBNull.Value);
-            command.Parameters.AddWithValue("@role", (object?)user.RoleId ?? DBNull.Value);
+            command.Parameters.AddWithValue("@docType", user.DocumentTypeId);
+            command.Parameters.AddWithValue("@country", user.CountryId);
+            command.Parameters.AddWithValue("@role", user.RoleId);
             command.Parameters.AddWithValue("@email", user.Email);
             command.Parameters.AddWithValue("@firstName", user.FirstName);
             command.Parameters.AddWithValue("@secondName", (object?)user.SecondName ?? DBNull.Value);
