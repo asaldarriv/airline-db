@@ -62,9 +62,9 @@ namespace Airline.UI
             tableLayoutPanelMain.Location = new Point(0, 0);
             tableLayoutPanelMain.Name = "tableLayoutPanelMain";
             tableLayoutPanelMain.RowCount = 3;
-            tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Percent, 70F));
-            tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 110F));
-            tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Percent, 100F)); // DataGridView ocupa todo el espacio restante
+            tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.AutoSize));      // Inputs se ajustan automáticamente
+            tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.AutoSize));      // Botones se ajustan automáticamente
             tableLayoutPanelMain.Size = new Size(830, 480);
             tableLayoutPanelMain.TabIndex = 0;
             // 
@@ -87,6 +87,8 @@ namespace Airline.UI
             // tableLayoutPanelInputs
             // 
             tableLayoutPanelInputs.Anchor = AnchorStyles.None;
+            tableLayoutPanelInputs.AutoSize = true;
+            tableLayoutPanelInputs.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             tableLayoutPanelInputs.ColumnCount = 2;
             tableLayoutPanelInputs.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
             tableLayoutPanelInputs.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
@@ -101,84 +103,55 @@ namespace Airline.UI
             tableLayoutPanelInputs.Location = new Point(165, 313);
             tableLayoutPanelInputs.Name = "tableLayoutPanelInputs";
             tableLayoutPanelInputs.RowCount = 4;
-            tableLayoutPanelInputs.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tableLayoutPanelInputs.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tableLayoutPanelInputs.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tableLayoutPanelInputs.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tableLayoutPanelInputs.Size = new Size(500, 104);
+            tableLayoutPanelInputs.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            tableLayoutPanelInputs.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            tableLayoutPanelInputs.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            tableLayoutPanelInputs.RowStyles.Add(new RowStyle(SizeType.AutoSize));
             tableLayoutPanelInputs.TabIndex = 1;
             // 
             // labelCode
             // 
             labelCode.Anchor = AnchorStyles.Right;
             labelCode.AutoSize = true;
-            labelCode.Location = new Point(150, 5);
-            labelCode.Name = "labelCode";
-            labelCode.Size = new Size(47, 20);
-            labelCode.TabIndex = 0;
             labelCode.Text = "Code:";
             // 
             // textBoxCode
             // 
             textBoxCode.Anchor = AnchorStyles.Left;
-            textBoxCode.Location = new Point(203, 3);
-            textBoxCode.Name = "textBoxCode";
             textBoxCode.Size = new Size(250, 27);
-            textBoxCode.TabIndex = 1;
             // 
             // labelName
             // 
             labelName.Anchor = AnchorStyles.Right;
             labelName.AutoSize = true;
-            labelName.Location = new Point(145, 35);
-            labelName.Name = "labelName";
-            labelName.Size = new Size(52, 20);
-            labelName.TabIndex = 2;
             labelName.Text = "Name:";
             // 
             // textBoxName
             // 
             textBoxName.Anchor = AnchorStyles.Left;
-            textBoxName.Location = new Point(203, 33);
-            textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(250, 27);
-            textBoxName.TabIndex = 3;
             // 
             // labelDescription
             // 
             labelDescription.Anchor = AnchorStyles.Right;
             labelDescription.AutoSize = true;
-            labelDescription.Location = new Point(109, 65);
-            labelDescription.Name = "labelDescription";
-            labelDescription.Size = new Size(88, 20);
-            labelDescription.TabIndex = 4;
             labelDescription.Text = "Description:";
             // 
             // textBoxDescription
             // 
             textBoxDescription.Anchor = AnchorStyles.Left;
-            textBoxDescription.Location = new Point(203, 63);
-            textBoxDescription.Name = "textBoxDescription";
             textBoxDescription.Size = new Size(250, 27);
-            textBoxDescription.TabIndex = 5;
             // 
             // labelActive
             // 
             labelActive.Anchor = AnchorStyles.Right;
             labelActive.AutoSize = true;
-            labelActive.Location = new Point(144, 95);
-            labelActive.Name = "labelActive";
-            labelActive.Size = new Size(53, 20);
-            labelActive.TabIndex = 6;
             labelActive.Text = "Active:";
             // 
             // checkBoxActive
             // 
             checkBoxActive.Anchor = AnchorStyles.Left;
-            checkBoxActive.Location = new Point(203, 93);
-            checkBoxActive.Name = "checkBoxActive";
             checkBoxActive.Size = new Size(20, 24);
-            checkBoxActive.TabIndex = 7;
             // 
             // flowLayoutPanelButtons
             // 
@@ -188,7 +161,6 @@ namespace Airline.UI
             flowLayoutPanelButtons.Controls.Add(buttonSave);
             flowLayoutPanelButtons.Controls.Add(buttonDelete);
             flowLayoutPanelButtons.Controls.Add(buttonCancel);
-            flowLayoutPanelButtons.Location = new Point(198, 430);
             flowLayoutPanelButtons.Margin = new Padding(0, 10, 0, 10);
             flowLayoutPanelButtons.Name = "flowLayoutPanelButtons";
             flowLayoutPanelButtons.Size = new Size(434, 40);
@@ -197,40 +169,28 @@ namespace Airline.UI
             // 
             // buttonAddNew
             // 
-            buttonAddNew.Location = new Point(3, 3);
-            buttonAddNew.Name = "buttonAddNew";
             buttonAddNew.Size = new Size(170, 35);
-            buttonAddNew.TabIndex = 0;
             buttonAddNew.Text = "Add new document type";
             buttonAddNew.UseVisualStyleBackColor = true;
             buttonAddNew.Click += buttonAddNew_Click;
             // 
             // buttonSave
             // 
-            buttonSave.Location = new Point(179, 3);
-            buttonSave.Name = "buttonSave";
             buttonSave.Size = new Size(80, 35);
-            buttonSave.TabIndex = 1;
             buttonSave.Text = "Save";
             buttonSave.UseVisualStyleBackColor = true;
             buttonSave.Click += buttonSave_Click;
             // 
             // buttonDelete
             // 
-            buttonDelete.Location = new Point(265, 3);
-            buttonDelete.Name = "buttonDelete";
             buttonDelete.Size = new Size(80, 35);
-            buttonDelete.TabIndex = 2;
             buttonDelete.Text = "Delete";
             buttonDelete.UseVisualStyleBackColor = true;
             buttonDelete.Click += buttonDelete_Click;
             // 
             // buttonCancel
             // 
-            buttonCancel.Location = new Point(351, 3);
-            buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(80, 35);
-            buttonCancel.TabIndex = 3;
             buttonCancel.Text = "Cancel";
             buttonCancel.UseVisualStyleBackColor = true;
             buttonCancel.Visible = false;
