@@ -11,6 +11,19 @@
         private System.Windows.Forms.Button buttonCountries;
         private System.Windows.Forms.Button buttonCities;
         private System.Windows.Forms.Button buttonLuggageTypes;
+        private System.Windows.Forms.Button buttonAirplaneStatuses;
+        private System.Windows.Forms.Button buttonFlightStatuses;
+        private System.Windows.Forms.Button buttonTicketStatuses;
+        private System.Windows.Forms.Button buttonContractsStatuses;
+        private System.Windows.Forms.Button buttonRoles;
+        private System.Windows.Forms.Button buttonLuggages;
+        private System.Windows.Forms.Button buttonAirplanes;
+        private System.Windows.Forms.Button buttonRoutes;
+        private System.Windows.Forms.Button buttonLayovers;
+        private System.Windows.Forms.Button buttonFlights;
+        private System.Windows.Forms.Button buttonTickets; // Added buttonTickets
+        private System.Windows.Forms.Button buttonEmployeesFlights; // Added buttonEmployeesFlights
+        private System.Windows.Forms.Button buttonUsers; // Added buttonUsers
         // Agrega aquí más botones según tus entidades...
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMenu;
 
@@ -36,6 +49,19 @@
             buttonCountries = new System.Windows.Forms.Button();
             buttonCities = new System.Windows.Forms.Button();
             buttonLuggageTypes = new System.Windows.Forms.Button();
+            buttonAirplaneStatuses = new System.Windows.Forms.Button();
+            buttonFlightStatuses = new System.Windows.Forms.Button();
+            buttonTicketStatuses = new System.Windows.Forms.Button();
+            buttonContractsStatuses = new System.Windows.Forms.Button();
+            buttonRoles = new System.Windows.Forms.Button();
+            buttonLuggages = new System.Windows.Forms.Button();
+            buttonAirplanes = new System.Windows.Forms.Button();
+            buttonRoutes = new System.Windows.Forms.Button();
+            buttonLayovers = new System.Windows.Forms.Button();
+            buttonFlights = new System.Windows.Forms.Button();
+            buttonTickets = new System.Windows.Forms.Button(); // Added buttonTickets initialization
+            buttonEmployeesFlights = new System.Windows.Forms.Button(); // Added buttonEmployeesFlights initialization
+            buttonUsers = new System.Windows.Forms.Button(); // Added buttonUsers initialization
             // Instancia aquí más botones si los tienes...
             tableLayoutPanelMenu = new System.Windows.Forms.TableLayoutPanel();
 
@@ -113,6 +139,136 @@
             buttonLuggageTypes.Margin = new System.Windows.Forms.Padding(10);
             buttonLuggageTypes.Click += ButtonLuggageTypes_Click;
 
+            // buttonAirplaneStatuses
+            buttonAirplaneStatuses.BackColor = System.Drawing.Color.Navy;
+            buttonAirplaneStatuses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonAirplaneStatuses.ForeColor = System.Drawing.Color.White;
+            buttonAirplaneStatuses.Name = "buttonAirplaneStatuses";
+            buttonAirplaneStatuses.Text = "Airplane Statuses";
+            buttonAirplaneStatuses.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonAirplaneStatuses.Margin = new System.Windows.Forms.Padding(10);
+            buttonAirplaneStatuses.Click += ButtonAirplaneStatuses_Click;
+
+            // buttonFlightStatuses
+            buttonFlightStatuses.BackColor = System.Drawing.Color.Navy;
+            buttonFlightStatuses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonFlightStatuses.ForeColor = System.Drawing.Color.White;
+            buttonFlightStatuses.Name = "buttonFlightStatuses";
+            buttonFlightStatuses.Text = "Flight Statuses";
+            buttonFlightStatuses.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonFlightStatuses.Margin = new System.Windows.Forms.Padding(10);
+            buttonFlightStatuses.Click += ButtonFlightStatuses_Click;
+
+            // buttonTicketStatuses
+            buttonTicketStatuses.BackColor = System.Drawing.Color.Navy;
+            buttonTicketStatuses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonTicketStatuses.ForeColor = System.Drawing.Color.White;
+            buttonTicketStatuses.Name = "buttonTicketStatuses";
+            buttonTicketStatuses.Text = "Ticket Statuses";
+            buttonTicketStatuses.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonTicketStatuses.Margin = new System.Windows.Forms.Padding(10);
+            buttonTicketStatuses.Click += ButtonTicketStatuses_Click;
+
+            // buttonContractsStatuses
+            buttonContractsStatuses.BackColor = System.Drawing.Color.Navy;
+            buttonContractsStatuses.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonContractsStatuses.ForeColor = System.Drawing.Color.White;
+            buttonContractsStatuses.Name = "buttonContractsStatuses";
+            buttonContractsStatuses.Text = "Contracts Statuses";
+            buttonContractsStatuses.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonContractsStatuses.Margin = new System.Windows.Forms.Padding(10);
+            buttonContractsStatuses.Click += ButtonContractsStatuses_Click;
+
+            // buttonRoles
+            buttonRoles.BackColor = System.Drawing.Color.Navy;
+            buttonRoles.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonRoles.ForeColor = System.Drawing.Color.White;
+            buttonRoles.Name = "buttonRoles";
+            buttonRoles.Text = "Roles";
+            buttonRoles.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonRoles.Margin = new System.Windows.Forms.Padding(10);
+            buttonRoles.Click += ButtonRoles_Click;
+
+            // buttonLuggages
+            buttonLuggages.BackColor = System.Drawing.Color.Navy;
+            buttonLuggages.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonLuggages.ForeColor = System.Drawing.Color.White;
+            buttonLuggages.Name = "buttonLuggages";
+            buttonLuggages.Text = "Luggages";
+            buttonLuggages.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonLuggages.Margin = new System.Windows.Forms.Padding(10);
+            buttonLuggages.Click += ButtonLuggages_Click;
+
+            // buttonAirplanes
+            buttonAirplanes.BackColor = System.Drawing.Color.Navy;
+            buttonAirplanes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonAirplanes.ForeColor = System.Drawing.Color.White;
+            buttonAirplanes.Name = "buttonAirplanes";
+            buttonAirplanes.Text = "Airplanes";
+            buttonAirplanes.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonAirplanes.Margin = new System.Windows.Forms.Padding(10);
+            buttonAirplanes.Click += ButtonAirplanes_Click;
+
+            // buttonRoutes
+            buttonRoutes.BackColor = System.Drawing.Color.Navy;
+            buttonRoutes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonRoutes.ForeColor = System.Drawing.Color.White;
+            buttonRoutes.Name = "buttonRoutes";
+            buttonRoutes.Text = "Routes";
+            buttonRoutes.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonRoutes.Margin = new System.Windows.Forms.Padding(10);
+            buttonRoutes.Click += ButtonRoutes_Click;
+
+            // buttonLayovers
+            buttonLayovers.BackColor = System.Drawing.Color.Navy;
+            buttonLayovers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonLayovers.ForeColor = System.Drawing.Color.White;
+            buttonLayovers.Name = "buttonLayovers";
+            buttonLayovers.Text = "Layovers";
+            buttonLayovers.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonLayovers.Margin = new System.Windows.Forms.Padding(10);
+            buttonLayovers.Click += ButtonLayovers_Click;
+
+            // buttonFlights
+            buttonFlights.BackColor = System.Drawing.Color.Navy;
+            buttonFlights.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonFlights.ForeColor = System.Drawing.Color.White;
+            buttonFlights.Name = "buttonFlights";
+            buttonFlights.Text = "Flights";
+            buttonFlights.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonFlights.Margin = new System.Windows.Forms.Padding(10);
+            buttonFlights.Click += ButtonFlights_Click;
+
+            // buttonTickets
+            buttonTickets.BackColor = System.Drawing.Color.Navy;
+            buttonTickets.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonTickets.ForeColor = System.Drawing.Color.White;
+            buttonTickets.Name = "buttonTickets";
+            buttonTickets.Text = "Tickets";
+            buttonTickets.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonTickets.Margin = new System.Windows.Forms.Padding(10);
+            buttonTickets.Click += ButtonTickets_Click;
+
+            // buttonEmployeesFlights
+            buttonEmployeesFlights.BackColor = System.Drawing.Color.Navy;
+            buttonEmployeesFlights.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonEmployeesFlights.ForeColor = System.Drawing.Color.White;
+            buttonEmployeesFlights.Name = "buttonEmployeesFlights";
+            buttonEmployeesFlights.Text = "Employees - Flights";
+            buttonEmployeesFlights.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonEmployeesFlights.Margin = new System.Windows.Forms.Padding(10);
+            buttonEmployeesFlights.Click += ButtonEmployeesFlights_Click;
+
+            // buttonUsers
+            buttonUsers.BackColor = System.Drawing.Color.Navy;
+            buttonUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            buttonUsers.ForeColor = System.Drawing.Color.White;
+            buttonUsers.Name = "buttonUsers";
+            buttonUsers.Text = "Users";
+            buttonUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            buttonUsers.Margin = new System.Windows.Forms.Padding(10);
+            buttonUsers.Click += ButtonUsers_Click;
+
             // buttonLogout
             buttonLogout.BackColor = System.Drawing.Color.Navy;
             buttonLogout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
@@ -138,8 +294,21 @@
             tableLayoutPanelMenu.Controls.Add(buttonCountries, 1, 0);
             tableLayoutPanelMenu.Controls.Add(buttonCities, 0, 1);
             tableLayoutPanelMenu.Controls.Add(buttonLuggageTypes, 1, 1);
-            tableLayoutPanelMenu.Controls.Add(buttonLogout, 0, 2);
-            tableLayoutPanelMenu.Controls.Add(buttonExit, 1, 2);
+            tableLayoutPanelMenu.Controls.Add(buttonAirplaneStatuses, 0, 2);
+            tableLayoutPanelMenu.Controls.Add(buttonFlightStatuses, 1, 2);
+            tableLayoutPanelMenu.Controls.Add(buttonTicketStatuses, 0, 3);
+            tableLayoutPanelMenu.Controls.Add(buttonContractsStatuses, 1, 3);
+            tableLayoutPanelMenu.Controls.Add(buttonLogout, 0, 4);
+            tableLayoutPanelMenu.Controls.Add(buttonExit, 1, 4);
+            tableLayoutPanelMenu.Controls.Add(buttonRoles, 1, 5);
+            tableLayoutPanelMenu.Controls.Add(buttonLuggages, 0, 5);
+            tableLayoutPanelMenu.Controls.Add(buttonAirplanes, 1, 5);
+            tableLayoutPanelMenu.Controls.Add(buttonRoutes, 0, 6);
+            tableLayoutPanelMenu.Controls.Add(buttonLayovers, 1, 6);
+            tableLayoutPanelMenu.Controls.Add(buttonFlights, 0, 7);
+            tableLayoutPanelMenu.Controls.Add(buttonTickets, 1, 7); // Added buttonTickets to TableLayoutPanel
+            tableLayoutPanelMenu.Controls.Add(buttonEmployeesFlights, 1, 8); // Added buttonEmployeesFlights to TableLayoutPanel
+            tableLayoutPanelMenu.Controls.Add(buttonUsers, 0, 9); // Added buttonUsers to TableLayoutPanel
 
             // MainMenu
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
