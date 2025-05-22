@@ -26,5 +26,3 @@
    - Ajusta los valores según tu configuración local de MySQL (usuario, contraseña, nombre de la base de datos, etc.).
 
 ---
-
-Si tienes dudas o problemas para levantar el proyecto, por favor revisa la documentación o abre un issue en este repositorio.
